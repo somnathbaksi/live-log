@@ -1,0 +1,80 @@
+----------------header------------------------
+Timestamp: 2007-1-11 14:21:08
+Message: Live5.Xps.Article, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null loaded.
+Category: Debug
+Priority: -1
+EventId: 1
+Severity: Information
+Title:
+Machine: LARRY
+Application Domain: 494a6933-13-128129988511112405
+Process Id: 576
+Process Name: C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\WebDev.WebServer.EXE
+Win32 Thread Id: 3096
+Thread Name: 
+Extended Properties: 
+----------------footer------------------------
+----------------header------------------------
+Timestamp: 2007-1-11 14:27:42
+Message: Live5.Xps.Article, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null loaded.
+Category: Debug
+Priority: -1
+EventId: 1
+Severity: Information
+Title:
+Machine: LARRY
+Application Domain: 494a6933-14-128129992340643655
+Process Id: 576
+Process Name: C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\WebDev.WebServer.EXE
+Win32 Thread Id: 448
+Thread Name: 
+Extended Properties: 
+----------------footer------------------------
+----------------header------------------------
+Timestamp: 2007-1-11 14:36:46
+Message: Live5.Xps.Article, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null loaded.
+Category: Debug
+Priority: -1
+EventId: 1
+Severity: Information
+Title:
+Machine: LARRY
+Application Domain: 494a6933-15-128129997893924905
+Process Id: 576
+Process Name: C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\WebDev.WebServer.EXE
+Win32 Thread Id: 3096
+Thread Name: 
+Extended Properties: 
+----------------footer------------------------
+----------------header------------------------
+Timestamp: 2007-1-11 14:42:08
+Message: Live5.Xps.Article, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null loaded.
+Category: Debug
+Priority: -1
+EventId: 1
+Severity: Information
+Title:
+Machine: LARRY
+Application Domain: 494a6933-16-128130001154393655
+Process Id: 576
+Process Name: C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\WebDev.WebServer.EXE
+Win32 Thread Id: 3096
+Thread Name: 
+Extended Properties: 
+----------------footer------------------------
+----------------header------------------------
+Timestamp: 2007-1-11 14:44:24
+Message: Live5.Xps.Article, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null loaded.
+Category: Debug
+Priority: -1
+EventId: 1
+Severity: Information
+Title:
+Machine: LARRY
+Application Domain: 494a6933-17-128130002503612405
+Process Id: 576
+Process Name: C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\WebDev.WebServer.EXE
+Win32 Thread Id: 3292
+Thread Name: 
+Extended Properties: 
+----------------footer------------------------

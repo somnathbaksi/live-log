@@ -1,0 +1,17 @@
+<Query xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>002a1fa9-3604-47e6-92cd-0cbd6637df26</Id>
+  <Title>2</Title>
+  <TermTitle>
+    <FieldName>Title</FieldName>
+    <CompairType>=</CompairType>
+    <Value>2</Value>
+  </TermTitle>
+  <Updated>
+    <Value>0001-01-01T00:00:00</Value>
+  </Updated>
+  <TermContent>
+    <FieldName>Content</FieldName>
+    <CompairType>=</CompairType>
+    <Value>2</Value>
+  </TermContent>
+</Query>

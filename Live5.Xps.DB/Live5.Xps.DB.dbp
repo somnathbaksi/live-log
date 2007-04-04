@@ -1,0 +1,37 @@
+# Microsoft Developer Studio Project File - Database Project
+Begin DataProject = "Live5.Xps.DB"
+   MSDTVersion = "80"
+   DefDBRef = ".\sqlexpress.Xps.dbo"
+   Begin Folder = "Change Scripts"
+   End
+   Begin Folder = "Create Scripts"
+      Script = "CreateDB.sql"
+      Script = "CreateDefaultData.sql"
+      Script = "CreateSp.SQL"
+      Script = "CreateTbl.SQL"
+      Script = "Xps.dbo.aspnet_Membership.SQL"
+      Script = "Xps.dbo.aspnet_Users.SQL"
+      Script = "Xps.dbo.sp_ApplyLabel.SQL"
+      Script = "Xps.dbo.sp_GetLabels.SQL"
+      Script = "Xps.dbo.sp_InsertArticle.SQL"
+      Script = "Xps.dbo.tbl_Article.SQL"
+      Script = "xps.dbo.tbl_Category.SQL"
+      Script = "Xps.dbo.tbl_Entry.SQL"
+      Script = "Xps.dbo.tbl_Label.SQL"
+      Script = "Xps.dbo.tbl_LabelQueryAssociation.SQL"
+      Script = "Xps.dbo.tbl_Query.SQL"
+      Script = "xps.dbo.tbl_TempQuery.SQL"
+      Script = "Xps.dbo.tbl_User.SQL"
+   End
+   Begin DBRefFolder = "Database References"
+      Begin DBRefNode = ".\sqlexpress.Xps.dbo"
+         ConnectStr = "Data Source=.\sqlexpress;Initial Catalog=Xps;Integrated Security=True;Pooling=False"
+         Provider = "{91510608-8809-4020-8897-FBA057E22D54}"
+         Colorizer = 6
+      End
+   End
+   Begin Folder = "Queries"
+      Script = "InsertCategories.sql"
+      Script = "SelectAllQuery.sql"
+   End
+End

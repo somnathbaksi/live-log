@@ -1,0 +1,241 @@
+body {
+  background:#cdb;
+  margin:0;
+  padding:10px 0 14px;
+  font:x-small Verdana,Sans-serif;
+  text-align:center;
+  color:#333;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+
+/* Header
+----------------------------------------------- */
+#rssheader {
+  background:#be4 url("http://www.blogblog.com/no565/topleft.gif") no-repeat left bottom;
+  padding:0 0 0 160px;
+  margin:0 0 10px;
+  color:#fff;
+  width:100%;
+  width/* */:/**/auto;
+  width:auto;
+  }
+#rssheader h1 {
+  background:url("http://www.blogblog.com/no565/bg_header.gif") no-repeat left top;
+  margin:0;
+  padding:40px 0 0;
+  font:bold 200%/97px Helvetica,Arial,Verdana,Sans-serif;
+  text-transform:lowercase;
+  }
+#blog-title a {
+  color:#fff;
+  text-decoration:none;
+  }
+
+/* Description
+----------------------------------------------- */
+#rsstagline {
+  background:#f90 url("http://www.blogblog.com/no565/bg_desc_top.gif") no-repeat left top;
+  margin:0 0 10px;
+  padding:12px 0 0;
+  color:#fff;
+  }
+#rsstagline p {
+  background:url("http://www.blogblog.com/no565/bg_desc_bot.gif") no-repeat left bottom;
+  margin:0;
+  padding:0 0 12px;
+  }
+#rsstagline em {
+  /* To remove the word next to the desription, delete the following background property */
+  background:url("http://www.blogblog.com/no565/temp_no.gif") no-repeat left center;
+  /* Keep everything below */
+  display:block;
+  padding:0 0 0 160px;
+  font:bold 75%/1.6em Arial,Verdana,Sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  min-height:12px;
+  }
+.postpage #description em {
+  font-size:1px;
+  line-height:1px;
+  color:#8df;
+  visibility:hidden;
+  }
+
+/* structure
+----------------------------------------------- */
+#wrap {
+  position:relative;
+  top:4px;
+  left:4px;
+  background:#ab8;
+  width:744px;
+  margin:0 auto;
+  text-align:left;
+  }
+#wrap2 {
+  position:relative;
+  top:-4px;
+  left:-4px;
+  background:#fff;
+  padding:10px;
+  }
+#rsscontent {
+  background:url("http://www.blogblog.com/no565/bg_content.gif") repeat-y left top;
+  width:100%;
+  font-size:85%;
+  }
+#rssmain {
+  background:#cdb url("http://www.blogblog.com/no565/corner_main.gif") no-repeat right top;
+  width:460px;
+  float:left;
+  color:#333;
+  }
+#rssmain2 {
+  margin:0;
+  padding:15px 20px;
+  }
+#sidebar {
+  background:#565 url("http://www.blogblog.com/no565/corner_sidebar.gif") no-repeat left top;
+  width:254px;
+  float:right;
+  padding:0;
+  color:#cdb;
+  }
+#sidebar2 {
+  margin:0;
+  padding:2px 20px 10px;
+  }
+
+/* Links
+----------------------------------------------- */
+a:link {
+  color:#388;
+  text-decoration:none;
+  }
+a:visited {
+  color:#776;
+  text-decoration:none;
+  }
+a:hover {
+  color:#333;
+  text-decoration:underline;
+  }
+a img {
+  border-width:0;
+  }
+#sidebar a:link {
+  color:#fff;
+  }
+#sidebar a:visited {
+  color:#ab9;
+  }
+#sidebar a:hover {
+  color:#fff;
+  }
+
+/* Posts
+----------------------------------------------- */
+.rsslink {
+  padding-top: 1em;
+}
+.rsslink a {
+  text-decoration:underline;
+}
+.rsslink a:link {
+  text-decoration:underline;
+}
+.rsslink a:visited {
+  text-decoration:underline;
+}
+.rsslink a:hover {
+  text-decoration:underline;
+}
+.rssdate {
+  font:bold 80%/1.4em Arial,Verdana,Sans-serif;
+  text-transform:lowercase;
+  color:#333;
+  padding-bottom: 1em;
+ }
+.rsssubject {
+  font:bold 80%/1.4em Arial,Verdana,Sans-serif;
+  text-transform:lowercase;
+  color:#333;
+ }
+.rssentry {
+  margin:0 0 2em;
+  }
+.rssentry h2 {
+  margin:0 0 .25em;
+  font:bold 150%/1.4em Helvetica,Arial,Verdana,Sans-serif;
+  color:#333;
+  }
+#rssmain h2 a {
+  text-decoration:none;
+  color:#366;
+  }
+#rssmain h2 a:hover {
+  color:#333;
+  }
+.rssentry p {
+  margin:0 0 .75em;
+  line-height:1.6em;
+  }
+.post-footer {
+  color:#ab9;
+  text-transform:lowercase;
+  }
+.post-footer em {
+  font-style:normal;
+  color:#787;
+  }
+.rssentry blockquote {
+  margin:1em 20px;
+  padding:5px 0;
+  border:2px solid #dec;
+  border-width:2px 0;
+  }
+.rssentry blockquote p {
+  margin:.5em 0;
+  }
+.rssentry img {
+  border:5px solid #fff;
+  }
+
+/* Sidebar
+----------------------------------------------- */
+.sidebar-title {
+  margin:1em 0 .25em;
+  font:bold 150%/1.4em Helvetica,Arial,Verdana,Sans-serif;
+  color:#897;
+  text-transform:lowercase;
+  }
+#sidebar ul {
+  margin:0 0 1.5em;
+  padding:0;
+  list-style:none;
+  }
+#sidebar li {
+  margin:0;
+  padding:0 0 .25em 20px;
+  text-indent:-20px;
+  line-height:1.4em;
+  }
+#sidebar p {
+  margin:0 0 .75em;
+  line-height:1.4em;
+  }
+
+/* Misc
+----------------------------------------------- */
+.clear {
+  clear:both;
+  display:block;
+  height:1px;
+  margin:0;
+  padding:0;
+  font-size:1px;
+  line-height:1px;
+  }
+

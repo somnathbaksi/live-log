@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='App_Themes/Default/atom03.xsl'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://www.live-5.com/8dbb9c54-8a63-4af9-8f39-bd0fdd2abd82</id>
+  <title />
+  <updated>0001-01-01T00:00:00+08:00</updated>
+  <entry>
+    <author>
+      <name>0280831e-3416-4e57-8c68-c9bb716335e5</name>
+      <uri>http://www.live-5.com/</uri>
+    </author>
+    <id>http://www.live-5.com/media/0ef8034910b741158ba6287b1528c33f</id>
+    <content type="video/x-flv" src="http://localhost:8080/Xps/Stream/eye.flv" />
+    <summary>vvvvvv</summary>
+    <title>vvv</title>
+    <updated>2007-03-17T21:22:53+08:00</updated>
+  </entry>
+</feed>
