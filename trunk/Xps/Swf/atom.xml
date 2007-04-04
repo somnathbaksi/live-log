@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://www.live-5.com/5bc64019-c99e-468c-93fb-50457e7c9150</id>
+  <title />
+  <updated>0001-01-01T00:00:00+08:00</updated>
+  <entry>
+    <author>
+      <name>3712c563-918e-4cfc-a0bb-ca978ceaaaeb</name>
+      <uri>http://www.live-5.com/</uri>
+    </author>
+    <id>http://www.live-5.com/entry/0912f03d447e4be591d9316d3d1b3e35</id>
+    <content type="video/x-flv" src="video.flv" />
+    <summary>Summary</summary>
+    <title>v</title>
+    <updated>2007-01-29T00:40:55+08:00</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>3712c563-918e-4cfc-a0bb-ca978ceaaaeb</name>
+      <uri>http://www.live-5.com/</uri>
+    </author>
+    <id>http://www.live-5.com/entry/0912f03d447e4be591d9316d3d1b3e35</id>
+    <content type="audio/mpeg" src="audio1.mp3" />
+    <summary>Summary</summary>
+    <title>v</title>
+    <updated>2007-01-29T00:40:55+08:00</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>3712c563-918e-4cfc-a0bb-ca978ceaaaeb</name>
+      <uri>http://www.live-5.com/</uri>
+    </author>
+    <id>http://www.live-5.com/entry/0912f03d447e4be591d9316d3d1b3e35</id>
+    <content type="video/x-flv" src="video.flv" />
+    <summary>Summary</summary>
+    <title>v</title>
+    <updated>2007-01-29T00:40:55+08:00</updated>
+  </entry>
+</feed>

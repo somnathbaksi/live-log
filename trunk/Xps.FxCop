@@ -1,0 +1,2301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.35" Name="Xps Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">http://www.gotdotnet.com/team/fxcop//xsl/1.35/FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-us" />
+  <VersionAware>False</VersionAware>
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/Bin/Debug/Live5.Xps.Article.dll" Analyze="False" AnalyzeAllChildren="False">
+   <Modules AnalyzeAllChildren="False">
+    <Module Name="live5.xps.article.dll" Analyze="False" AnalyzeAllChildren="False">
+     <Namespaces AnalyzeAllChildren="False">
+      <Namespace Name="Live5.Xps.ArticleComponent" Analyze="False" AnalyzeAllChildren="False">
+       <Types AnalyzeAllChildren="False">
+        <Type Name="ArticleService" Analyze="False" AnalyzeAllChildren="False">
+         <Members AnalyzeAllChildren="False">
+          <Member Name="QueryType" Analyze="True" AnalyzeAllChildren="True" />
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+     <Resources AnalyzeAllChildren="True" />
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="$(ProjectDir)/Bin/Debug/Live5.Xps.Framework.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.35">
+  <Namespaces>
+   <Namespace Name="Live5.Xps.Framework">
+    <Messages>
+     <Message Id="Xps" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+      <Issue Name="Namespace">
+       <Item>Xps</Item>
+       <Item>Live5.Xps.Framework</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Live5.Xps.Framework.Atom">
+    <Messages>
+     <Message Id="Xps" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+      <Issue Name="Namespace">
+       <Item>Xps</Item>
+       <Item>Live5.Xps.Framework.Atom</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Live5.Xps.Framework.BuiltIn">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2006-12-03 09:50:03Z">
+      <Issue>
+       <Item>Live5.Xps.Framework.BuiltIn</Item>
+      </Issue>
+     </Message>
+     <Message Id="Xps" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+      <Issue Name="Namespace">
+       <Item>Xps</Item>
+       <Item>Live5.Xps.Framework.BuiltIn</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Live5.Xps.Framework.Core">
+    <Messages>
+     <Message Id="Xps" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+      <Issue Name="Namespace">
+       <Item>Xps</Item>
+       <Item>Live5.Xps.Framework.Core</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Live5.Xps.Framework.Dal">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2007-01-02 14:00:36Z">
+      <Issue>
+       <Item>Live5.Xps.Framework.Dal</Item>
+      </Issue>
+     </Message>
+     <Message Id="Dal" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2007-01-02 14:00:36Z">
+      <Issue Name="Namespace">
+       <Item>Dal</Item>
+       <Item>Live5.Xps.Framework.Dal</Item>
+      </Issue>
+     </Message>
+     <Message Id="Xps" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2007-01-02 14:00:36Z">
+      <Issue Name="Namespace">
+       <Item>Xps</Item>
+       <Item>Live5.Xps.Framework.Dal</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Live5.Xps.Framework.External">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2006-12-03 09:50:03Z">
+      <Issue>
+       <Item>Live5.Xps.Framework.External</Item>
+      </Issue>
+     </Message>
+     <Message Id="Xps" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+      <Issue Name="Namespace">
+       <Item>Xps</Item>
+       <Item>Live5.Xps.Framework.External</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="Live5.Xps.Framework.Utils">
+    <Messages>
+     <Message Id="Utils" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+      <Issue Name="Namespace">
+       <Item>Utils</Item>
+       <Item>Live5.Xps.Framework.Utils</Item>
+      </Issue>
+     </Message>
+     <Message Id="Xps" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+      <Issue Name="Namespace">
+       <Item>Xps</Item>
+       <Item>Live5.Xps.Framework.Utils</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/Bin/Debug/Live5.Xps.Framework.dll">
+    <Modules>
+     <Module Name="live5.xps.framework.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldDeclareMinimumSecurity" Category="Microsoft.Usage" CheckId="CA2209" Created="2006-12-03 09:50:03Z">
+        <Issue>
+         <Item>Live5.Xps.Framework</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2006-12-03 09:50:03Z">
+        <Issue Name="NoStrongName">
+         <Item>Live5.Xps.Framework</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Live5.Xps.Framework">
+        <Types>
+         <Type Name="BusinessLayerException">
+          <Messages>
+           <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Created="2007-01-02 14:00:36Z">
+            <Issue Level="Error">
+             <Item>BusinessLayerException</Item>
+            </Issue>
+           </Message>
+           <Message Id="System.ApplicationException" TypeName="TypesShouldNotExtendCertainBaseTypes" Category="Microsoft.Design" CheckId="CA1058" Created="2007-01-02 14:00:36Z">
+            <Issue Name="System.ApplicationException">
+             <Item>BusinessLayerException</Item>
+             <Item>System.ApplicationException</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="GoogleMembershipProvider">
+          <Members>
+           <Member Name="ChangePassword(System.String,System.String,System.String):System.Boolean">
+            <Messages>
+             <Message Id="System.Web.Security.MembershipPasswordException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.ChangePassword(String, String, String):Boolean</Item>
+               <Item>1</Item>
+               <Item>MembershipPasswordException.MembershipPasswordException(String)</Item>
+               <Item>Change password canceled due to new password validation failure.</Item>
+              </Issue>
+             </Message>
+             <Message Id="1#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>oldPwd</Item>
+               <Item>GoogleMembershipProvider.ChangePassword(String, String, String):Boolean</Item>
+               <Item>oldPassword</Item>
+               <Item>MembershipProvider.ChangePassword(String, String, String):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message Id="2#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>newPwd</Item>
+               <Item>GoogleMembershipProvider.ChangePassword(String, String, String):Boolean</Item>
+               <Item>newPassword</Item>
+               <Item>MembershipProvider.ChangePassword(String, String, String):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.ChangePassword(String, String, String):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>UPDATE [____] SET Password = ?, LastPasswordChangedDate = ?  WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.ChangePassword(String, String, String):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ChangePasswordQuestionAndAnswer(System.String,System.String,System.String,System.String):System.Boolean">
+            <Messages>
+             <Message Id="2#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>newPwdQuestion</Item>
+               <Item>GoogleMembershipProvider.ChangePasswordQuestionAndAnswer(String, String, String, String):Boolean</Item>
+               <Item>newPasswordQuestion</Item>
+               <Item>MembershipProvider.ChangePasswordQuestionAndAnswer(String, String, String, String):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message Id="3#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>newPwdAnswer</Item>
+               <Item>GoogleMembershipProvider.ChangePasswordQuestionAndAnswer(String, String, String, String):Boolean</Item>
+               <Item>newPasswordAnswer</Item>
+               <Item>MembershipProvider.ChangePasswordQuestionAndAnswer(String, String, String, String):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.ChangePasswordQuestionAndAnswer(String, String, String, String):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>UPDATE [____] SET PasswordQuestion = ?, PasswordAnswer = ? WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.ChangePasswordQuestionAndAnswer(String, String, String, String):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object,System.Web.Security.MembershipCreateStatus&amp;):System.Web.Security.MembershipUser">
+            <Messages>
+             <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Created="2007-01-02 14:00:36Z">
+              <Issue Name="IsNullOrEmpty">
+               <Item>op_Inequality</Item>
+               <Item>""</Item>
+               <Item>GoogleMembershipProvider.CreateUser(String, String, String, String, String, Boolean, Object, MembershipCreateStatus&amp;):MembershipUser</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="DeleteUser(System.String,System.Boolean):System.Boolean">
+            <Messages>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.DeleteUser(String, Boolean):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>DELETE FROM [____] WHERE Username = ? AND Applicationname = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.DeleteUser(String, Boolean):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="EncodePassword(System.String):System.String">
+            <Messages>
+             <Message Id="System.Configuration.Provider.ProviderException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.EncodePassword(String):String</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Unsupported password format.</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="FindUsersByEmail(System.String,System.Int32,System.Int32,System.Int32&amp;):System.Web.Security.MembershipUserCollection">
+            <Messages>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.FindUsersByEmail(String, Int32, Int32, Int32&amp;):MembershipUserCollection</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT Count(*) FROM [____] WHERE Email LIKE ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.FindUsersByEmail(String, Int32, Int32, Int32&amp;):MembershipUserCollection</Item>
+              </Issue>
+              <Issue>
+               <Item>SELECT PKID, Username, Email, PasswordQuestion, Comment, IsApproved, IsLockedOut, CreationDate, LastLoginDate, LastActivityDate, LastPasswordChangedDate, LastLockedOutDate  FROM [____]  WHERE Email LIKE ? AND ApplicationName = ?  ORDER BY Username Asc</Item>
+               <Item>DbCommand.set_CommandText(String):Void</Item>
+               <Item>GoogleMembershipProvider.FindUsersByEmail(String, Int32, Int32, Int32&amp;):MembershipUserCollection</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="FindUsersByName(System.String,System.Int32,System.Int32,System.Int32&amp;):System.Web.Security.MembershipUserCollection">
+            <Messages>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.FindUsersByName(String, Int32, Int32, Int32&amp;):MembershipUserCollection</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT Count(*) FROM [____] WHERE Username LIKE ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.FindUsersByName(String, Int32, Int32, Int32&amp;):MembershipUserCollection</Item>
+              </Issue>
+              <Issue>
+               <Item>SELECT PKID, Username, Email, PasswordQuestion, Comment, IsApproved, IsLockedOut, CreationDate, LastLoginDate, LastActivityDate, LastPasswordChangedDate, LastLockedOutDate  FROM [____]  WHERE Username LIKE ? AND ApplicationName = ?  ORDER BY Username Asc</Item>
+               <Item>DbCommand.set_CommandText(String):Void</Item>
+               <Item>GoogleMembershipProvider.FindUsersByName(String, Int32, Int32, Int32&amp;):MembershipUserCollection</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetAllUsers(System.Int32,System.Int32,System.Int32&amp;):System.Web.Security.MembershipUserCollection">
+            <Messages>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.GetAllUsers(Int32, Int32, Int32&amp;):MembershipUserCollection</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT Count(*) FROM [____] WHERE ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.GetAllUsers(Int32, Int32, Int32&amp;):MembershipUserCollection</Item>
+              </Issue>
+              <Issue>
+               <Item>SELECT PKID, Username, Email, PasswordQuestion, Comment, IsApproved, IsLockedOut, CreationDate, LastLoginDate, LastActivityDate, LastPasswordChangedDate, LastLockedOutDate  FROM [____]  WHERE ApplicationName = ?  ORDER BY Username Asc</Item>
+               <Item>DbCommand.set_CommandText(String):Void</Item>
+               <Item>GoogleMembershipProvider.GetAllUsers(Int32, Int32, Int32&amp;):MembershipUserCollection</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetConfigValue(System.String,System.String):System.String">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2007-01-02 14:00:36Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>GoogleMembershipProvider.GetConfigValue(String, String):String</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetNumberOfUsersOnline():System.Int32">
+            <Messages>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.GetNumberOfUsersOnline():Int32</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT Count(*) FROM [____] WHERE LastActivityDate &gt; ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.GetNumberOfUsersOnline():Int32</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetPassword(System.String,System.String):System.String">
+            <Messages>
+             <Message Id="System.Configuration.Provider.ProviderException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.GetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Cannot retrieve Hashed passwords.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.GetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Password Retrieval Not Enabled.</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Web.Security.MembershipPasswordException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.GetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>MembershipPasswordException.MembershipPasswordException(String)</Item>
+               <Item>Incorrect password answer.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.GetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>MembershipPasswordException.MembershipPasswordException(String)</Item>
+               <Item>The supplied user is locked out.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.GetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>MembershipPasswordException.MembershipPasswordException(String)</Item>
+               <Item>The supplied user name is not found.</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.GetPassword(String, String):String</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT Password, PasswordAnswer, IsLockedOut FROM [____] WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.GetPassword(String, String):String</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetUser(System.Object,System.Boolean):System.Web.Security.MembershipUser">
+            <Messages>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.GetUser(Object, Boolean):MembershipUser</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT PKID, Username, Email, PasswordQuestion, Comment, IsApproved, IsLockedOut, CreationDate, LastLoginDate, LastActivityDate, LastPasswordChangedDate, LastLockedOutDate FROM [____] WHERE PKID = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.GetUser(Object, Boolean):MembershipUser</Item>
+              </Issue>
+              <Issue>
+               <Item>UPDATE [____] SET LastActivityDate = ? WHERE PKID = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.GetUser(Object, Boolean):MembershipUser</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetUser(System.String,System.Boolean):System.Web.Security.MembershipUser">
+            <Messages>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.GetUser(String, Boolean):MembershipUser</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT PKID, Username, Email, PasswordQuestion, Comment, IsApproved, IsLockedOut, CreationDate, LastLoginDate, LastActivityDate, LastPasswordChangedDate, LastLockedOutDate FROM [____] WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.GetUser(String, Boolean):MembershipUser</Item>
+              </Issue>
+              <Issue>
+               <Item>UPDATE [____] SET LastActivityDate = ? WHERE Username = ? AND Applicationname = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.GetUser(String, Boolean):MembershipUser</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetUserNameByEmail(System.String):System.String">
+            <Messages>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.GetUserNameByEmail(String):String</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT Username FROM [____] WHERE Email = ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.GetUserNameByEmail(String):String</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="HexToByte(System.String):System.Byte[]">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2007-01-02 14:00:36Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>GoogleMembershipProvider.HexToByte(String):Byte[]</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="Initialize(System.String,System.Collections.Specialized.NameValueCollection):System.Void">
+            <Messages>
+             <Message Id="System.Configuration.Provider.ProviderException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Connection string cannot be blank.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Password format not supported.</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToBoolean(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToBoolean(System.String)</Item>
+               <Item>System.Convert.ToBoolean(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToBoolean(System.String)</Item>
+               <Item>System.Convert.ToBoolean(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToBoolean(System.String)</Item>
+               <Item>System.Convert.ToBoolean(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToBoolean(System.String)</Item>
+               <Item>System.Convert.ToBoolean(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToBoolean(System.String)</Item>
+               <Item>System.Convert.ToBoolean(System.String,System.IFormatProvider)</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToInt32(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToInt32(System.String)</Item>
+               <Item>System.Convert.ToInt32(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToInt32(System.String)</Item>
+               <Item>System.Convert.ToInt32(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToInt32(System.String)</Item>
+               <Item>System.Convert.ToInt32(System.String,System.IFormatProvider)</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToInt32(System.String)</Item>
+               <Item>System.Convert.ToInt32(System.String,System.IFormatProvider)</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+               <Item>System.Convert.ToString(System.String)</Item>
+               <Item>System.Convert.ToString(System.String,System.IFormatProvider)</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Created="2007-01-02 14:00:36Z">
+              <Issue Name="IsNullOrEmpty">
+               <Item>op_Equality</Item>
+               <Item>""</Item>
+               <Item>GoogleMembershipProvider.Initialize(String, NameValueCollection):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ResetPassword(System.String,System.String):System.String">
+            <Messages>
+             <Message Id="System.Configuration.Provider.ProviderException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Password answer required for password reset.</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.NotSupportedException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>NotSupportedException.NotSupportedException(String)</Item>
+               <Item>Password reset is not enabled.</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Web.Security.MembershipPasswordException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>MembershipPasswordException.MembershipPasswordException(String)</Item>
+               <Item>Incorrect password answer.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>MembershipPasswordException.MembershipPasswordException(String)</Item>
+               <Item>Reset password canceled due to password validation failure.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>MembershipPasswordException.MembershipPasswordException(String)</Item>
+               <Item>The supplied user is locked out.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>MembershipPasswordException.MembershipPasswordException(String)</Item>
+               <Item>The supplied user name is not found.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+               <Item>1</Item>
+               <Item>MembershipPasswordException.MembershipPasswordException(String)</Item>
+               <Item>User not found, or user is locked out. Password not Reset.</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT PasswordAnswer, IsLockedOut FROM [____] WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+              </Issue>
+              <Issue>
+               <Item>UPDATE [____] SET Password = ?, LastPasswordChangedDate = ? WHERE Username = ? AND ApplicationName = ? AND IsLockedOut = False</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.ResetPassword(String, String):String</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="UnEncodePassword(System.String):System.String">
+            <Messages>
+             <Message Id="System.Configuration.Provider.ProviderException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.UnEncodePassword(String):String</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Cannot unencode a hashed password.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.UnEncodePassword(String):String</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Unsupported password format.</Item>
+              </Issue>
+             </Message>
+             <Message Id="unencode" TypeName="LiteralsShouldBeSpelledCorrectly" Category="Microsoft.Usage" CheckId="CA2204" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>unencode</Item>
+               <Item>Cannot unencode a hashed password.</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="UnlockUser(System.String):System.Boolean">
+            <Messages>
+             <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>username</Item>
+               <Item>GoogleMembershipProvider.UnlockUser(String):Boolean</Item>
+               <Item>userName</Item>
+               <Item>MembershipProvider.UnlockUser(String):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.UnlockUser(String):Boolean</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>UPDATE [____]  SET IsLockedOut = False, LastLockedOutDate = ?  WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.UnlockUser(String):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="UpdateFailureCount(System.String,System.String):System.Void">
+            <Messages>
+             <Message Id="System.Configuration.Provider.ProviderException.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Unable to lock out user.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Unable to update failure count and window start.</Item>
+              </Issue>
+              <Issue>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+               <Item>1</Item>
+               <Item>ProviderException.ProviderException(String)</Item>
+               <Item>Unable to update failure count.</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>SELECT FailedPasswordAttemptCount,   FailedPasswordAttemptWindowStart,   FailedPasswordAnswerAttemptCount,   FailedPasswordAnswerAttemptWindowStart   FROM [____]   WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+              </Issue>
+              <Issue>
+               <Item>UPDATE [____]   SET FailedPasswordAnswerAttemptCount = ?  WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>DbCommand.set_CommandText(String):Void</Item>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+              </Issue>
+              <Issue>
+               <Item>UPDATE [____]   SET FailedPasswordAnswerAttemptCount = ?,       FailedPasswordAnswerAttemptWindowStart = ?   WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>DbCommand.set_CommandText(String):Void</Item>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+              </Issue>
+              <Issue>
+               <Item>UPDATE [____]   SET FailedPasswordAttemptCount = ?  WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>DbCommand.set_CommandText(String):Void</Item>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+              </Issue>
+              <Issue>
+               <Item>UPDATE [____]   SET FailedPasswordAttemptCount = ?,       FailedPasswordAttemptWindowStart = ?   WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>DbCommand.set_CommandText(String):Void</Item>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+              </Issue>
+              <Issue>
+               <Item>UPDATE [____]   SET IsLockedOut = ?, LastLockedOutDate = ?   WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>DbCommand.set_CommandText(String):Void</Item>
+               <Item>GoogleMembershipProvider.UpdateFailureCount(String, String):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="UpdateUser(System.Web.Security.MembershipUser):System.Void">
+            <Messages>
+             <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.UpdateUser(MembershipUser):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>UPDATE [____] SET Email = ?, Comment = ?, IsApproved = ? WHERE Username = ? AND ApplicationName = ?</Item>
+               <Item>OdbcCommand.OdbcCommand(String, OdbcConnection)</Item>
+               <Item>GoogleMembershipProvider.UpdateUser(MembershipUser):Void</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>'user'</Item>
+               <Item>GoogleMembershipProvider.UpdateUser(MembershipUser):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ValidateUser(System.String,System.String):System.Boolean">
+            <Messages>
+             <Message TypeName="PassSystemUriObjectsInsteadOfStrings" Category="Microsoft.Usage" CheckId="CA2234" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.ValidateUser(String, String):Boolean</Item>
+               <Item>WebRequest.Create(Uri):WebRequest</Item>
+               <Item>WebRequest.Create(String):WebRequest</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="WriteToEventLog(System.Exception,System.String):System.Void">
+            <Messages>
+             <Message Id="System.Diagnostics.EventLog.WriteEntry(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>GoogleMembershipProvider.WriteToEventLog(Exception, String):Void</Item>
+               <Item>1</Item>
+               <Item>EventLog.WriteEntry(String):Void</Item>
+               <Item>An exception occurred communicating with the data source.&#xA;&#xA;Action: ____&#xA;&#xA;Exception: __</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IPublishService">
+          <Members>
+           <Member Name="DeleteEntry(System.String):System.Boolean">
+            <Messages>
+             <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>entryUri</Item>
+               <Item>IPublishService.DeleteEntry(String):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetEntry(System.String):Live5.Xps.Framework.Atom.IEntry">
+            <Messages>
+             <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>entryUri</Item>
+               <Item>IPublishService.GetEntry(String):IEntry</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PublishService">
+          <Members>
+           <Member Name="PutEntry(Live5.Xps.Framework.Atom.IEntry):System.Boolean">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>'entry'</Item>
+               <Item>PublishService.PutEntry(IEntry):Boolean</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="QueryService">
+          <Members>
+           <Member Name="GetXmlFeed(System.String):System.Xml.XmlDocument">
+            <Messages>
+             <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Created="2006-12-03 09:50:03Z">
+              <Issue Name="System.Xml.XmlNode">
+               <Item>QueryService.GetXmlFeed(String):XmlDocument</Item>
+               <Item>System.Xml.XmlDocument</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="RecoverableUpdateException">
+          <Messages>
+           <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Created="2007-01-02 14:00:36Z">
+            <Issue Level="Error">
+             <Item>RecoverableUpdateException</Item>
+            </Issue>
+           </Message>
+           <Message Id="System.ApplicationException" TypeName="TypesShouldNotExtendCertainBaseTypes" Category="Microsoft.Design" CheckId="CA1058" Created="2007-01-02 14:00:36Z">
+            <Issue Name="System.ApplicationException">
+             <Item>RecoverableUpdateException</Item>
+             <Item>System.ApplicationException</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Live5.Xps.Framework.Atom">
+        <Types>
+         <Type Name="Entry">
+          <Members>
+           <Member Name="CategoryList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>CategoryList</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>System.Collections.Generic.List`1&lt;System.String&gt;</Item>
+               <Item>Entry.CategoryList:List`1&lt;System.String&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+            <Accessors>
+             <Accessor Name="get_CategoryList():System.Collections.Generic.List`1&lt;System.String&gt;">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.get_CategoryList():List`1&lt;System.String&gt;</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.get_CategoryList():List`1&lt;System.String&gt;</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_CategoryList(System.Collections.Generic.List`1&lt;System.String&gt;):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.set_CategoryList(List`1&lt;System.String&gt;):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.set_CategoryList(List`1&lt;System.String&gt;):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="ContributorList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>ContributorList</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>System.Collections.Generic.List`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+               <Item>Entry.ContributorList:List`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+            <Accessors>
+             <Accessor Name="get_ContributorList():System.Collections.Generic.List`1&lt;Live5.Xps.Framework.Atom.Person&gt;">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.get_ContributorList():List`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.get_ContributorList():List`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_ContributorList(System.Collections.Generic.List`1&lt;Live5.Xps.Framework.Atom.Person&gt;):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.set_ContributorList(List`1&lt;Live5.Xps.Framework.Atom.Person&gt;):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.set_ContributorList(List`1&lt;Live5.Xps.Framework.Atom.Person&gt;):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="LinkList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>LinkList</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>System.Collections.Generic.List`1&lt;System.String&gt;</Item>
+               <Item>Entry.LinkList:List`1&lt;System.String&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+            <Accessors>
+             <Accessor Name="get_LinkList():System.Collections.Generic.List`1&lt;System.String&gt;">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.get_LinkList():List`1&lt;System.String&gt;</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.get_LinkList():List`1&lt;System.String&gt;</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_LinkList(System.Collections.Generic.List`1&lt;System.String&gt;):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.set_LinkList(List`1&lt;System.String&gt;):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.set_LinkList(List`1&lt;System.String&gt;):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="Published">
+            <Accessors>
+             <Accessor Name="get_Published():System.DateTime">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.get_Published():DateTime</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.get_Published():DateTime</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_Published(System.DateTime):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.set_Published(DateTime):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.set_Published(DateTime):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="Rights">
+            <Accessors>
+             <Accessor Name="get_Rights():System.String">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.get_Rights():String</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.get_Rights():String</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_Rights(System.String):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.set_Rights(String):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.set_Rights(String):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="Source">
+            <Accessors>
+             <Accessor Name="get_Source():System.String">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.get_Source():String</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.get_Source():String</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_Source(System.String):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Entry.set_Source(String):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Entry.set_Source(String):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Feed">
+          <Members>
+           <Member Name="AuthorList">
+            <Accessors>
+             <Accessor Name="get_AuthorList():System.Collections.Generic.ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+                <Issue>
+                 <Item>Feed.get_AuthorList():ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-02 14:00:36Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.get_AuthorList():ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_AuthorList(System.Collections.Generic.ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+                <Issue>
+                 <Item>Feed.set_AuthorList(ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-02 14:00:36Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.set_AuthorList(ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="CategoryList">
+            <Accessors>
+             <Accessor Name="get_CategoryList():System.Collections.Generic.ICollection`1&lt;System.String&gt;">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+                <Issue>
+                 <Item>Feed.get_CategoryList():ICollection`1&lt;System.String&gt;</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-02 14:00:36Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.get_CategoryList():ICollection`1&lt;System.String&gt;</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_CategoryList(System.Collections.Generic.ICollection`1&lt;System.String&gt;):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+                <Issue>
+                 <Item>Feed.set_CategoryList(ICollection`1&lt;System.String&gt;):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-02 14:00:36Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.set_CategoryList(ICollection`1&lt;System.String&gt;):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="ContributorList">
+            <Accessors>
+             <Accessor Name="get_ContributorList():System.Collections.Generic.ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+                <Issue>
+                 <Item>Feed.get_ContributorList():ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-02 14:00:36Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.get_ContributorList():ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_ContributorList(System.Collections.Generic.ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+                <Issue>
+                 <Item>Feed.set_ContributorList(ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-02 14:00:36Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.set_ContributorList(ICollection`1&lt;Live5.Xps.Framework.Atom.Person&gt;):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="Generator">
+            <Accessors>
+             <Accessor Name="set_Generator(System.String):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Feed.set_Generator(String):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.set_Generator(String):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="Icon">
+            <Accessors>
+             <Accessor Name="get_Icon():System.Uri">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Feed.get_Icon():Uri</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.get_Icon():Uri</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_Icon(System.Uri):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Feed.set_Icon(Uri):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.set_Icon(Uri):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="LinkList">
+            <Accessors>
+             <Accessor Name="get_LinkList():System.Collections.Generic.ICollection`1&lt;Live5.Xps.Framework.Atom.ILink&gt;">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+                <Issue>
+                 <Item>Feed.get_LinkList():ICollection`1&lt;Live5.Xps.Framework.Atom.ILink&gt;</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-02 14:00:36Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.get_LinkList():ICollection`1&lt;Live5.Xps.Framework.Atom.ILink&gt;</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_LinkList(System.Collections.Generic.ICollection`1&lt;Live5.Xps.Framework.Atom.ILink&gt;):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+                <Issue>
+                 <Item>Feed.set_LinkList(ICollection`1&lt;Live5.Xps.Framework.Atom.ILink&gt;):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-02 14:00:36Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.set_LinkList(ICollection`1&lt;Live5.Xps.Framework.Atom.ILink&gt;):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="Logo">
+            <Accessors>
+             <Accessor Name="get_Logo():System.String">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Feed.get_Logo():String</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.get_Logo():String</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_Logo(System.String):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Feed.set_Logo(String):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.set_Logo(String):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="Rights">
+            <Accessors>
+             <Accessor Name="get_Rights():System.String">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Feed.get_Rights():String</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.get_Rights():String</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_Rights(System.String):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Feed.set_Rights(String):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.set_Rights(String):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="SubTitle">
+            <Accessors>
+             <Accessor Name="get_SubTitle():System.String">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Feed.get_SubTitle():String</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.get_SubTitle():String</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="set_SubTitle(System.String):System.Void">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+                <Issue>
+                 <Item>Feed.set_SubTitle(String):Void</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+                <Issue Name="TooGeneric">
+                 <Item>Feed.set_SubTitle(String):Void</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IEntry">
+          <Members>
+           <Member Name="CategoryList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>CategoryList</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>System.Collections.Generic.List`1&lt;System.String&gt;</Item>
+               <Item>IEntry.CategoryList:List`1&lt;System.String&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ContributorList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>ContributorList</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>System.Collections.Generic.List`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+               <Item>IEntry.ContributorList:List`1&lt;Live5.Xps.Framework.Atom.Person&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="LinkList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>LinkList</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>System.Collections.Generic.List`1&lt;System.String&gt;</Item>
+               <Item>IEntry.LinkList:List`1&lt;System.String&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IFeed">
+          <Members>
+           <Member Name="SubTitle">
+            <Messages>
+             <Message Id="SubTitle" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2006-12-03 09:50:03Z">
+              <Issue Name="ShouldBeDiscreteTerm">
+               <Item>SubTitle</Item>
+               <Item>property</Item>
+               <Item>SubTitle</Item>
+               <Item>Subtitle</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ILink">
+          <Members>
+           <Member Name="Hreflang">
+            <Messages>
+             <Message Id="Hreflang" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+              <Issue Name="Member">
+               <Item>Hreflang</Item>
+               <Item>ILink.Hreflang:Uri</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="rel">
+            <Messages>
+             <Message Id="Member" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2006-12-03 09:50:03Z">
+              <Issue Name="Member">
+               <Item>rel</Item>
+              </Issue>
+             </Message>
+             <Message Id="rel" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+              <Issue Name="Member">
+               <Item>rel</Item>
+               <Item>ILink.rel:String</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Live5.Xps.Framework.BuiltIn">
+        <Types>
+         <Type Name="BuiltInQuery">
+          <Members>
+           <Member Name=".ctor(System.Data.IDataRecord)">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2007-01-03 08:59:38Z">
+              <Issue>
+               <Item>'dr'</Item>
+               <Item>BuiltInQuery.BuiltInQuery(IDataRecord)</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BuiltInQueryCreator">
+          <Members>
+           <Member Name="Create(System.String):Live5.Xps.Framework.Core.IQuery">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2007-01-03 13:31:55Z" FixCategory="Breaking">
+              <Issue>
+               <Item>BuiltInQueryCreator.Create(String):IQuery</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BuiltInQueryExecutor">
+          <Members>
+           <Member Name="GetEntryList(Live5.Xps.Framework.Core.IQuery):System.Collections.Generic.IList`1&lt;Live5.Xps.Framework.Atom.IEntry&gt;">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2007-01-02 14:00:36Z" FixCategory="Breaking">
+              <Issue>
+               <Item>BuiltInQueryExecutor.GetEntryList(IQuery):IList`1&lt;Live5.Xps.Framework.Atom.IEntry&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetXmlFeed(Live5.Xps.Framework.Core.IQuery):System.Xml.XmlDocument">
+            <Messages>
+             <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>BuiltInQueryExecutor.GetXmlFeed(IQuery):XmlDocument</Item>
+               <Item>1</Item>
+               <Item>Exception.Exception(String)</Item>
+               <Item>The method or operation is not implemented.</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2006-12-03 09:50:03Z">
+              <Issue Name="TooGeneric">
+               <Item>BuiltInQueryExecutor.GetXmlFeed(IQuery):XmlDocument</Item>
+               <Item>System.Exception</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BuiltInService">
+          <Members>
+           <Member Name="DataProvider">
+            <Accessors>
+             <Accessor Name="get_DataProvider():Live5.Xps.Framework.Core.IEntryDataProvider">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-03 13:31:55Z">
+                <Issue>
+                 <Item>BuiltInService.get_DataProvider():IEntryDataProvider</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-03 13:31:55Z">
+                <Issue Name="TooGeneric">
+                 <Item>BuiltInService.get_DataProvider():IEntryDataProvider</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Live5.Xps.Framework.Core">
+        <Types>
+         <Type Name="Constants">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2006-12-03 09:50:03Z">
+            <Issue>
+             <Item>Live5.Xps.Framework.Core.Constants</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IQueryCreator">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Created="2007-01-03 13:31:55Z">
+            <Issue>
+             <Item>IQueryCreator</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IQueryExecutor">
+          <Members>
+           <Member Name="GetXmlFeed(Live5.Xps.Framework.Core.IQuery):System.Xml.XmlDocument">
+            <Messages>
+             <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Created="2006-12-03 09:50:03Z">
+              <Issue Name="System.Xml.XmlNode">
+               <Item>IQueryExecutor.GetXmlFeed(IQuery):XmlDocument</Item>
+               <Item>System.Xml.XmlDocument</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IQueryProvider">
+          <Members>
+           <Member Name="GetQuery(System.Guid):Live5.Xps.Framework.Core.IQuery">
+            <Messages>
+             <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>IQueryProvider.GetQuery(Guid):IQuery</Item>
+               <Item>T</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Query">
+          <Members>
+           <Member Name=".ctor(System.Data.IDataRecord)">
+            <Messages>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2007-01-03 08:59:38Z">
+              <Issue>
+               <Item>'dr'</Item>
+               <Item>Query.Query(IDataRecord)</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="QueryItem`1">
+          <Members>
+           <Member Name="CompairType">
+            <Messages>
+             <Message Id="Compair" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+              <Issue Name="Member">
+               <Item>Compair</Item>
+               <Item>QueryItem`1.CompairType:String</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="QuerySqlProvider">
+          <Members>
+           <Member Name="GetAllQuery():System.Collections.Generic.IList`1&lt;Live5.Xps.Framework.Core.IQuery&gt;">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2007-01-03 13:31:55Z">
+              <Issue Certainty="50">
+               <Item>GetAllQuery</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="GetQuery(System.Guid):Live5.Xps.Framework.Core.IQuery">
+            <Messages>
+             <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-03 08:59:38Z">
+              <Issue>
+               <Item>QuerySqlProvider.GetQuery(Guid):IQuery</Item>
+               <Item>1</Item>
+               <Item>Exception.Exception(String)</Item>
+               <Item>query not found</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-03 08:59:38Z">
+              <Issue Name="TooGeneric">
+               <Item>QuerySqlProvider.GetQuery(Guid):IQuery</Item>
+               <Item>System.Exception</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>QuerySqlProvider.GetQuery(Guid):IQuery</Item>
+               <Item>T</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="QueryXmlProvider">
+          <Members>
+           <Member Name="GetQuery(System.Guid):Live5.Xps.Framework.Core.IQuery">
+            <Messages>
+             <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>QueryXmlProvider.GetQuery(Guid):IQuery</Item>
+               <Item>T</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ServiceFactory">
+          <Members>
+           <Member Name="GetService(System.String):Live5.Xps.Framework.Core.IService">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2006-12-03 09:50:03Z" FixCategory="Breaking">
+              <Issue>
+               <Item>ServiceFactory.GetService(String):IService</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Live5.Xps.Framework.Dal">
+        <Types>
+         <Type Name="EntryDao">
+          <Messages>
+           <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Created="2007-01-02 14:00:36Z">
+            <Issue>
+             <Item>EntryDao</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="GetEntryType(System.String):System.String">
+            <Messages>
+             <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Created="2007-01-03 13:31:55Z">
+              <Issue>
+               <Item>entryUri</Item>
+               <Item>EntryDao.GetEntryType(String):String</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="SearchEntrys(System.String):System.Collections.Generic.IList`1&lt;Live5.Xps.Framework.Atom.IEntry&gt;">
+            <Messages>
+             <Message Id="Entrys" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2007-01-02 14:00:36Z">
+              <Issue Name="Member">
+               <Item>Entrys</Item>
+               <Item>EntryDao.SearchEntrys(String):IList`1&lt;Live5.Xps.Framework.Atom.IEntry&gt;</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Live5.Xps.Framework.External">
+        <Types>
+         <Type Name="ExternalQuery">
+          <Members>
+           <Member Name="SourceUrl">
+            <Messages>
+             <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>SourceUrl</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ExternalQueryCreator">
+          <Members>
+           <Member Name="Create(System.String):Live5.Xps.Framework.Core.IQuery">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2007-01-03 13:31:55Z" FixCategory="Breaking">
+              <Issue>
+               <Item>ExternalQueryCreator.Create(String):IQuery</Item>
+              </Issue>
+             </Message>
+             <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Created="2007-01-03 13:31:55Z">
+              <Issue>
+               <Item>externalUri</Item>
+               <Item>ExternalQueryCreator.Create(String):IQuery</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ExternalService">
+          <Members>
+           <Member Name="DataProvider">
+            <Accessors>
+             <Accessor Name="get_DataProvider():Live5.Xps.Framework.Core.IEntryDataProvider">
+              <Messages>
+               <Message Id="System.Exception.#ctor(System.String)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-03 13:31:55Z">
+                <Issue>
+                 <Item>ExternalService.get_DataProvider():IEntryDataProvider</Item>
+                 <Item>1</Item>
+                 <Item>Exception.Exception(String)</Item>
+                 <Item>The method or operation is not implemented.</Item>
+                </Issue>
+               </Message>
+               <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2007-01-03 13:31:55Z">
+                <Issue Name="TooGeneric">
+                 <Item>ExternalService.get_DataProvider():IEntryDataProvider</Item>
+                 <Item>System.Exception</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Live5.Xps.Framework.Utils">
+        <Types>
+         <Type Name="AddInController">
+          <Members>
+           <Member Name="AddInAssemblyDictionary">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>AddInAssemblyDictionary</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AppMessageExceptionHandler">
+          <Members>
+           <Member Name=".ctor(System.Collections.Specialized.NameValueCollection)">
+            <Messages>
+             <Message Id="ignore" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2007-01-02 14:00:36Z" FixCategory="Breaking">
+              <Issue>
+               <Item>ignore</Item>
+               <Item>AppMessageExceptionHandler.AppMessageExceptionHandler(NameValueCollection)</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="HandleException(System.Exception,System.Guid):System.Exception">
+            <Messages>
+             <Message Id="1#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>correlationID</Item>
+               <Item>AppMessageExceptionHandler.HandleException(Exception, Guid):Exception</Item>
+               <Item>handlingInstanceId</Item>
+               <Item>IExceptionHandler.HandleException(Exception, Guid):Exception</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ShowThreadExceptionDialog(System.Exception):System.Windows.Forms.DialogResult">
+            <Messages>
+             <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>AppMessageExceptionHandler.ShowThreadExceptionDialog(Exception):DialogResult</Item>
+               <Item>2</Item>
+               <Item>MessageBox.Show(String, String, MessageBoxButtons, MessageBoxIcon):DialogResult</Item>
+               <Item>Application Error</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2007-01-02 14:00:36Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>AppMessageExceptionHandler.ShowThreadExceptionDialog(Exception):DialogResult</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>AppMessageExceptionHandler.ShowThreadExceptionDialog(Exception):DialogResult</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AppRuntimeEnv">
+          <Messages>
+           <Message Id="Env" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2006-12-03 09:50:03Z">
+            <Issue Name="Type">
+             <Item>Env</Item>
+             <Item>Live5.Xps.Framework.Utils.AppRuntimeEnv</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Created="2006-12-03 09:50:03Z">
+            <Issue>
+             <Item>AppRuntimeEnv</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="ExceptionPolicyConfig_GlobalPolicy">
+            <Messages>
+             <Message Id="Member" TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Created="2007-01-02 14:00:36Z">
+              <Issue Name="Member">
+               <Item>ExceptionPolicyConfig_GlobalPolicy</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AppTextExceptionFormatter">
+          <Members>
+           <Member Name="WriteDescription():System.Void">
+            <Messages>
+             <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>AppTextExceptionFormatter.WriteDescription():Void</Item>
+               <Item>System.String.Format(System.String,System.Object)</Item>
+               <Item>System.String.Format(System.IFormatProvider,System.String,System.Object[])</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DebugTraceListener">
+          <Members>
+           <Member Name="TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object):System.Void">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2007-01-02 14:00:36Z">
+              <Issue Name="Parameter">
+               <Item>data</Item>
+               <Item>Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry</Item>
+               <Item>DebugTraceListener.TraceData(TraceEventCache, String, TraceEventType, Int32, Object):Void</Item>
+               <Item>isint</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2007-01-02 14:00:36Z">
+              <Issue>
+               <Item>'data'</Item>
+               <Item>DebugTraceListener.TraceData(TraceEventCache, String, TraceEventType, Int32, Object):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FlvConvertor">
+          <Messages>
+           <Message Id="Convertor" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2007-01-02 14:00:36Z">
+            <Issue Name="Type">
+             <Item>Convertor</Item>
+             <Item>Live5.Xps.Framework.Utils.FlvConvertor</Item>
+            </Issue>
+           </Message>
+           <Message Id="Flv" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2007-01-02 14:00:36Z">
+            <Issue Name="Type">
+             <Item>Flv</Item>
+             <Item>Live5.Xps.Framework.Utils.FlvConvertor</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name=".ctor(System.String)">
+            <Messages>
+             <Message Id="0#ffmpeg" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2007-01-02 14:00:36Z">
+              <Issue Name="Parameter">
+               <Item>FlvConvertor.FlvConvertor(String)</Item>
+               <Item>ffmpeg</Item>
+               <Item>ffmpegPath</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="ConvertFlv(System.String,System.String):System.Void">
+            <Messages>
+             <Message Id="Flv" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2007-01-02 14:00:36Z">
+              <Issue Name="Member">
+               <Item>Flv</Item>
+               <Item>FlvConvertor.ConvertFlv(String, String):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SqlDbTool">
+          <Messages>
+           <Message TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706" Created="2007-01-02 14:00:36Z">
+            <Issue Name="Type">
+             <Item>Db</Item>
+             <Item>Live5.Xps.Framework.Utils.SqlDbTool</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Created="2007-01-02 14:00:36Z">
+            <Issue>
+             <Item>SqlDbTool</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="ExecuteQuery(System.String,System.Object[]):System.Data.IDataReader">
+            <Messages>
+             <Message Id="1#Params" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2007-01-02 14:00:36Z">
+              <Issue Name="Parameter">
+               <Item>SqlDbTool.ExecuteQuery(String, Object[]):IDataReader</Item>
+               <Item>Params</Item>
+               <Item>spParams</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="XmlTool">
+          <Messages>
+           <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Created="2006-12-03 09:50:03Z">
+            <Issue>
+             <Item>XmlTool</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="ObjectToXml(TObject):System.Xml.XmlDocument">
+            <Messages>
+             <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Created="2006-12-03 09:50:03Z">
+              <Issue Name="System.Xml.XmlNode">
+               <Item>XmlTool.ObjectToXml(TObject):XmlDocument</Item>
+               <Item>System.Xml.XmlDocument</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="XmlToObject(System.Type,System.Xml.XmlDocument):System.Object">
+            <Messages>
+             <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Created="2007-01-03 08:59:38Z">
+              <Issue Name="System.Xml.XmlNode">
+               <Item>XmlTool.XmlToObject(Type, XmlDocument):Object</Item>
+               <Item>System.Xml.XmlDocument</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062" Created="2007-01-03 08:59:38Z">
+              <Issue>
+               <Item>'xmlDoc'</Item>
+               <Item>XmlTool.XmlToObject(Type, XmlDocument):Object</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="XmlToObject(System.Xml.XmlDocument):TObject">
+            <Messages>
+             <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Created="2006-12-03 09:50:03Z">
+              <Issue>
+               <Item>XmlTool.XmlToObject(XmlDocument):TObject</Item>
+               <Item>TObject</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Created="2006-12-03 09:50:03Z">
+              <Issue Name="System.Xml.XmlNode">
+               <Item>XmlTool.XmlToObject(XmlDocument):TObject</Item>
+               <Item>System.Xml.XmlDocument</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldDeclareMinimumSecurity" Category="Microsoft.Usage" CheckId="CA2209">
+    <Resolution Name="Default">No valid permission requests were found for assembly '{0}'. You should always specify the minimum security permissions using SecurityAction.RequestMinimum.</Resolution>
+   </Rule>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign '{0}' with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040">
+    <Resolution Name="Default">Define a custom attribute to replace '{0}'.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+    <Resolution Name="Default">'{0}' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+    <Resolution Name="Default">Change '{0}' to be read-only by removing the property setter.</Resolution>
+   </Rule>
+   <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+    <Resolution Name="ShouldBeDiscreteTerm">The compound word '{0}' in {1} '{2}' exists as a discrete term. If your usage is intended to be single word, case it as '{3}'.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
+    <Resolution Name="Parameter">'{0}', a parameter, is cast to type '{1}' multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+    <Resolution Name="Default">Change '{0}' in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotPassLiteralsAsLocalizedParameters" Category="Microsoft.Globalization" CheckId="CA1303">
+    <Resolution Name="Default">{0} passes a literal as parameter {1} of a call to {2}. Retrieve the following string argument from a resource table instead: '{3}'</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+    <Resolution Name="TooGeneric">{0} creates an exception of type '{1}', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   </Rule>
+   <Rule TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004">
+    <Resolution Name="Default">Consider a design where {0} doesn't require explicit type parameter '{1}' in any call to it.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Member">Correct the casing of member name '{0}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Member">Correct the spelling of the unrecognized token '{0}' in member name '{1}'.</Resolution>
+    <Resolution Name="Namespace">Correct the spelling of the unrecognized token '{0}' in namespace '{1}'.</Resolution>
+    <Resolution Name="Parameter">In method {0}, correct the spelling of the unrecognized token '{1}' in parameter name '{2}' or strip it entirely if it represents any sort of hungarian notation.</Resolution>
+    <Resolution Name="Type">Correct the spelling of the unrecognized token '{0}' in type name '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+    <Resolution Name="Member">Remove all underscores from member '{0}'.</Resolution>
+   </Rule>
+   <Rule TypeName="LiteralsShouldBeSpelledCorrectly" Category="Microsoft.Usage" CheckId="CA2204">
+    <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+    <Resolution Name="Default">Add [Serializable] to '{0}' as this type implements ISerializable.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in VB) of {0} is never used. Mark the member as static (or Shared in VB) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059">
+    <Resolution Name="System.Xml.XmlNode">Modify member '{0}' so that it no longer exposes the concrete type {1}. Use IXPathNavigable to represent Xml data sources.</Resolution>
+   </Rule>
+   <Rule TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725">
+    <Resolution Name="Default">Change parameter name '{0}' of method {1} to '{2}' in order to match the identifier as it has been declared in {3}.</Resolution>
+   </Rule>
+   <Rule TypeName="PassSystemUriObjectsInsteadOfStrings" Category="Microsoft.Usage" CheckId="CA2234">
+    <Resolution Name="Default">Modify {0} to call {1} instead of {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+    <Resolution Name="Default">{0} rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewSqlQueriesForSecurityVulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+    <Resolution Name="Default">Review if the query string "{0}", passed to {1} in {2}, accepts any user input. If so, consider using a parameterized Sql query instead of building up the query via string concatenations.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter '{0}' of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+   <Rule TypeName="ShortAcronymsShouldBeUppercase" Category="Microsoft.Naming" CheckId="CA1706">
+    <Resolution Name="Type">Correct the capitalization of '{0}' in type name '{1}'.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="Default">{0} makes a call to {1} that does not explicitly provide an IFormatProvider. This should be replaced with a call to {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+    <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control. If it is set to RightTolLeft.Inherit, check its parent until a value indicating Yes or No is found.</Resolution>
+   </Rule>
+   <Rule TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053">
+    <Resolution Name="Default">Remove the public constructors from '{0}'.</Resolution>
+   </Rule>
+   <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+    <Resolution Name="IsNullOrEmpty">Replace the call to String.{0}({1}) in '{2}' with a call to String.IsNullOrEmpty.</Resolution>
+   </Rule>
+   <Rule TypeName="TypesShouldNotExtendCertainBaseTypes" Category="Microsoft.Design" CheckId="CA1058">
+    <Resolution Name="System.ApplicationException">Change {0}'s base type so that it no longer extends {1}. This base exception type does not provide any additional value for framework classes. Extend System.Exception or an existing unsealed exception type instead. Do not create a new exception base type unless there is specific value in enabling the creation of a catch handler for an entire class of exceptions.</Resolution>
+   </Rule>
+   <Rule TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054">
+    <Resolution Name="Default">Change the type of parameter '{0}' of method {1} from string to System.Uri, or provide an overload of {1}, that allows '{0}' to be passed as a System.Uri object.</Resolution>
+   </Rule>
+   <Rule TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056">
+    <Resolution Name="Default">Change the type of property '{0}' from string to System.Uri.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change '{0}' to a property if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="ValidateArgumentsOfPublicMethods" Category="Microsoft.Design" CheckId="CA1062">
+    <Resolution Name="Default">Validate parameter {0} passed to externally visible method {1}.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

@@ -1,0 +1,181 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2E73AA3-6245-432B-904A-4AEA7A342EC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Live5.Xps.Framework</RootNamespace>
+    <AssemblyName>Live5.Xps.Framework</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\MSEnterpriseLib\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArticleComponent\Article.cs" />
+    <Compile Include="ArticleComponent\ArticleDataProvider.cs" />
+    <Compile Include="ArticleComponent\ArticleQuery.cs" />
+    <Compile Include="ArticleComponent\ArticleQueryCreator.cs" />
+    <Compile Include="ArticleComponent\ArticleQueryExecutor.cs" />
+    <Compile Include="ArticleComponent\ArticleService.cs" />
+    <Compile Include="ArticleComponent\ServiceConfig.cs" />
+    <Compile Include="ArticleComponent\ServiceConstants.cs" />
+    <Compile Include="Atom\AtomCategory.cs" />
+    <Compile Include="Atom\AtomContent.cs" />
+    <Compile Include="Atom\AtomGenerator.cs" />
+    <Compile Include="Atom\AtomLink.cs" />
+    <Compile Include="Atom\AtomPersonConstruct.cs" />
+    <Compile Include="Atom\Enums.cs" />
+    <Compile Include="Atom\MediaType.cs" />
+    <Compile Include="Atom\ScopedElement.cs" />
+    <Compile Include="Atom\Utils.cs" />
+    <Compile Include="Dal\LabelDao.cs" />
+    <Compile Include="Model\Label.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Auth\GoogleMembershipProvider.cs" />
+    <Compile Include="BuiltIn\BuiltInQuery.cs" />
+    <Compile Include="BuiltIn\BuiltInQueryCreator.cs" />
+    <Compile Include="BuiltIn\BuiltInQueryExecutor.cs" />
+    <Compile Include="BuiltIn\BuiltInService.cs" />
+    <Compile Include="Core\Constants.cs" />
+    <Compile Include="Model\Feed.cs" />
+    <Compile Include="Model\IEntry.cs" />
+    <Compile Include="Core\IEntryDataProvider.cs" />
+    <Compile Include="Model\IFeed.cs" />
+    <Compile Include="Core\IQueryCreator.cs" />
+    <Compile Include="Core\QuerySqlProvider.cs" />
+    <Compile Include="Dal\EntryDao.cs" />
+    <Compile Include="Exceptions\BusinessLayerException.cs" />
+    <Compile Include="Exceptions\RecoverableUpdateException.cs" />
+    <Compile Include="External\ExternalQuery.cs" />
+    <Compile Include="External\ExternalQueryCreator.cs" />
+    <Compile Include="External\ExternalQueryExecutor.cs" />
+    <Compile Include="External\ExternalService.cs" />
+    <Compile Include="IPublishService.cs" />
+    <Compile Include="IQueryService.cs" />
+    <Compile Include="Core\IService.cs" />
+    <Compile Include="Core\ServiceFactory.cs" />
+    <Compile Include="Model\Entry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mvpxml\XmlNamespaces.cs" />
+    <Compile Include="Mvpxml\XPathNavigatorReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublishService.cs" />
+    <Compile Include="QueryService.cs" />
+    <Compile Include="Model\IQuery.cs" />
+    <Compile Include="Core\IQueryExecutor.cs" />
+    <Compile Include="Model\Query.cs" />
+    <Compile Include="Model\QueryItem.cs" />
+    <Compile Include="Core\QueryXmlProvider.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\AddInController.cs" />
+    <Compile Include="Utils\AppMessageExceptionHandler.cs" />
+    <Compile Include="Utils\AppRuntimeEnv.cs" />
+    <Compile Include="Utils\AppTextExceptionFormatter.cs" />
+    <Compile Include="Atom\AtomConstants.cs" />
+    <Compile Include="Atom\AtomWriter.cs" />
+    <Compile Include="Utils\DebugTraceListener.cs" />
+    <Compile Include="Utils\FlvConvertor.cs" />
+    <Compile Include="Utils\QueryCreatorAttribute.cs" />
+    <Compile Include="Utils\SqlDbTool.cs" />
+    <Compile Include="Utils\XmlTool.cs" />
+    <Compile Include="MediaComponent\ServiceConstants.cs" />
+    <Compile Include="MediaComponent\Media.cs" />
+    <Compile Include="MediaComponent\MediaDataProvider.cs" />
+    <Compile Include="MediaComponent\MediaQuery.cs" />
+    <Compile Include="MediaComponent\MediaQueryCreator.cs" />
+    <Compile Include="MediaComponent\MediaQueryExecutor.cs" />
+    <Compile Include="MediaComponent\MediaService.cs" />
+    <Compile Include="MediaComponent\ServiceConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Atom\mediatypes.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

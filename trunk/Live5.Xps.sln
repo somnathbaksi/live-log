@@ -1,0 +1,161 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\Xps\", "Xps", "{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		ProjectReferences = "{C2E73AA3-6245-432B-904A-4AEA7A342EC2}|Live5.Xps.Framework.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Xps"
+		Debug.AspNetCompiler.PhysicalPath = "F:\XpsProject\Xps\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Xps\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Xps"
+		Release.AspNetCompiler.PhysicalPath = "F:\XpsProject\Xps\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Xps\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "8080"
+		VWDDynamicPort = "false"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live5.Xps.Framework", "Live5.Xps.Framework\Live5.Xps.Framework.csproj", "{C2E73AA3-6245-432B-904A-4AEA7A342EC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{AEAA48B1-AF4F-49AB-81D2-0A4F8E5C8148}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\DBModel.vsd = Docs\DBModel.vsd
+		Docs\PublishEverything.doc = Docs\PublishEverything.doc
+		Docs\XPS1.0.vsd = Docs\XPS1.0.vsd
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live5.Xps.Framework.UnitTest", "Live5.Xps.Framework.UnitTest\Live5.Xps.Framework.UnitTest.csproj", "{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}"
+EndProject
+Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "Live5.Xps.DB", "Live5.Xps.DB\Live5.Xps.DB.dbp", "{938EBBBE-F71E-4D45-B5E0-AAE56300DAEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{D5B9A337-7BEA-427A-96A0-7037C96D42E2}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\xDirectory.dll = ThirdParty\xDirectory.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnterpriseLib", "EnterpriseLib", "{9ED6D450-8C19-43C5-B68F-AA48B7181D69}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\MSEnterpriseLib\EntLibConfig.exe = ThirdParty\MSEnterpriseLib\EntLibConfig.exe
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.xml = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.Configuration.Design.xml
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Database.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Database.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Database.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Database.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.Database.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Caching.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Common.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Common.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Common.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Data.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Data.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Data.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Logging.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Configuration.Design.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.xml = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.Configuration.Design.xml
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.EnterpriseLibrary.Security.XML
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.ObjectBuilder.dll = ThirdParty\MSEnterpriseLib\Microsoft.Practices.ObjectBuilder.dll
+		ThirdParty\MSEnterpriseLib\Microsoft.Practices.ObjectBuilder.XML = ThirdParty\MSEnterpriseLib\Microsoft.Practices.ObjectBuilder.XML
+		ThirdParty\MSEnterpriseLib\MsmqDistributor.exe = ThirdParty\MSEnterpriseLib\MsmqDistributor.exe
+		ThirdParty\MSEnterpriseLib\MsmqDistributor.exe.config = ThirdParty\MSEnterpriseLib\MsmqDistributor.exe.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6E521315-89A1-49AC-885E-D5420FBD47DE}"
+	ProjectSection(SolutionItems) = preProject
+		Live5.Xps.vsmdi = Live5.Xps.vsmdi
+		TestRunConfig1.testrunconfig = TestRunConfig1.testrunconfig
+		Xps.FxCop = Xps.FxCop
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Live5.Xps.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Debug|.NET.ActiveCfg = Debug|.NET
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Debug|.NET.Build.0 = Debug|.NET
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Release|.NET.ActiveCfg = Debug|.NET
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Release|.NET.Build.0 = Debug|.NET
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{20F20447-E3EE-46DB-B60B-C6C3C6243D4F}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Release|.NET.ActiveCfg = Release|Any CPU
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C2E73AA3-6245-432B-904A-4AEA7A342EC2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Release|.NET.ActiveCfg = Release|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CC8C5D31-D847-4A28-B0AE-E733CD04AD27}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9ED6D450-8C19-43C5-B68F-AA48B7181D69} = {D5B9A337-7BEA-427A-96A0-7037C96D42E2}
+	EndGlobalSection
+EndGlobal
