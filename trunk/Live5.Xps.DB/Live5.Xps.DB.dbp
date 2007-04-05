@@ -29,6 +29,11 @@ Begin DataProject = "Live5.Xps.DB"
          Provider = "{91510608-8809-4020-8897-FBA057E22D54}"
          Colorizer = 6
       End
+      Begin DBRefNode = "Xps.mdf"
+         ConnectStr = "Data Source=.\SQLEXPRESS;AttachDbFilename=E:\svnlocal\live-log\Xps\App_Data\Xps.mdf;Integrated Security=True;User Instance=True"
+         Provider = "{91510608-8809-4020-8897-FBA057E22D54}"
+         Colorizer = 6
+      End
    End
    Begin Folder = "Queries"
       Script = "InsertCategories.sql"
