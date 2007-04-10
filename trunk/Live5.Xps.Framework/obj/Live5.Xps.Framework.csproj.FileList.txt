@@ -4,6 +4,4 @@ obj\Debug\ResolveAssemblyReference.cache
 ..\Bin\Debug\Live5.Xps.Framework.pdb
 obj\Debug\Live5.Xps.Framework.dll
 obj\Debug\Live5.Xps.Framework.pdb
-obj\Debug\Live5.Xps.Framework.Resources.resources
-obj\Debug\Live5.Xps.Framework.csproj.GenerateResource.Cache
 obj\Debug\Live5.Xps.Framework.Atom.mediatypes.txt

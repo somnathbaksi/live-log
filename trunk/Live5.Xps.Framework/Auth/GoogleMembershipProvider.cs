@@ -1221,7 +1221,7 @@ namespace Live5.Xps.Framework
           request.Method = "POST";
           Stream requestStream = request.GetRequestStream();
           StreamWriter writer = new StreamWriter(requestStream);
-          writer.Write("accountType=HOSTED_OR_GOOGLE&Email=zl3143@gmail.com&Passwd=a0l2a1n2&service=cl&source=Live5-Test-1.05");
+          writer.Write("accountType=HOSTED_OR_GOOGLE&Email=zl3143@gmail.com&Passwd=a0l2a1n2kk&service=cl&source=Live5-Test-1.05");
           writer.Flush();
           writer.Close();
           HttpWebResponse response = request.GetResponse() as HttpWebResponse;
