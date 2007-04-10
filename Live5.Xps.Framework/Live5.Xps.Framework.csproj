@@ -132,11 +132,6 @@
     <Compile Include="Model\Query.cs" />
     <Compile Include="Model\QueryItem.cs" />
     <Compile Include="Core\QueryXmlProvider.cs" />
-    <Compile Include="Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Utils\AddInController.cs" />
     <Compile Include="Utils\AppMessageExceptionHandler.cs" />
     <Compile Include="Utils\AppRuntimeEnv.cs" />
@@ -159,13 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources.resx">
-      <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Atom\mediatypes.txt" />
