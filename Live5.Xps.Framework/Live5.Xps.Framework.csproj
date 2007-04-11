@@ -97,7 +97,6 @@
     <Compile Include="Dal\LabelDao.cs" />
     <Compile Include="Model\Label.cs" />
     <Compile Include="Model\Person.cs" />
-    <Compile Include="Auth\GoogleMembershipProvider.cs" />
     <Compile Include="BuiltIn\BuiltInQuery.cs" />
     <Compile Include="BuiltIn\BuiltInQueryCreator.cs" />
     <Compile Include="BuiltIn\BuiltInQueryExecutor.cs" />
