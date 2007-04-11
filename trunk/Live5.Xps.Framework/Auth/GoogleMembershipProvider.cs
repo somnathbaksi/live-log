@@ -1221,10 +1221,23 @@ namespace Live5.Xps.Framework
           request.Method = "POST";
           Stream requestStream = request.GetRequestStream();
           StreamWriter writer = new StreamWriter(requestStream);
-          writer.Write("accountType=HOSTED_OR_GOOGLE&Email=zl3143@gmail.com&Passwd=a0l2a1n2kk&service=cl&source=Live5-Test-1.05");
+          writer.Write("accountType=HOSTED_OR_GOOGLE&Email="+username+"&Passwd="+password+"&service=cl&source=Live5-Test-1.05");
           writer.Flush();
           writer.Close();
-          HttpWebResponse response = request.GetResponse() as HttpWebResponse;
+          HttpWebResponse response = null;
+          try
+          {
+              response = request.GetResponse() as HttpWebResponse;
+          }
+          catch (System.Net.WebException e)
+          {
+              if (e.Status == WebExceptionStatus.ProtocolError)
+              {
+                  return isValid;
+              }
+              throw;
+          }
+
           StreamReader reader = new StreamReader(response.GetResponseStream());
           string[] results = new string[10];
           int i = 0;
@@ -1234,7 +1247,7 @@ namespace Live5.Xps.Framework
               i++;
           }
 
-          if (results[0].Length!=0)
+          if (results[0].Length != 0)
           {
               isValid = true;
           }
