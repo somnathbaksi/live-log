@@ -93,6 +93,7 @@
     <Compile Include="Atom\MediaType.cs" />
     <Compile Include="Atom\ScopedElement.cs" />
     <Compile Include="Atom\Utils.cs" />
+    <Compile Include="Auth\XpsMembershipProvider.cs" />
     <Compile Include="Dal\LabelDao.cs" />
     <Compile Include="Model\Label.cs" />
     <Compile Include="Model\Person.cs" />
