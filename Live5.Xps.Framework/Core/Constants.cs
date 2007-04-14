@@ -7,7 +7,7 @@ namespace Live5.Xps.Framework.Core
    public class Constants
     {
        public readonly static Uri DefaultUri = new Uri(BaseUri);
-       public const string BaseUri = "http://www.live-5.com/";
+       public const string BaseUri = "http://localhost:8080/Xps/";
        internal const string ServiceDictionaryCachingKey = "ServiceDictionaryCachingKey";
        internal const string BuiltInServiceType = "Live5.Xps.Framework.BuiltIn.BuiltInService";
        internal const string ExternalServiceType = "Live5.Xps.Framework.External.ExternalService";

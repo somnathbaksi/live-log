@@ -8,6 +8,7 @@ using Live5.Xps.Framework.Utils;
 using System.Data;
 using Live5.Xps.Framework.External;
 using System.IO;
+using Live5.Xps.Framework.BuiltIn;
 namespace Live5.Xps.Framework.Core
 {
     public class QuerySqlProvider
@@ -84,13 +85,18 @@ namespace Live5.Xps.Framework.Core
             return queries;
         }
 
+        /// <summary>
+        /// Get Query from query provider.
+        /// </summary>
+        /// <param name="queryId">Query Id.</param>
+        /// <returns>Query found by Id, if query not found, return null.</returns>
         public static IQuery GetQuery(Guid queryId)
         {
             string content = null;
             IDataReader dr = SqlDbTool.ExecuteQuery(Constants.Sp_SelectQuery, queryId);
             if (!dr.Read())
             {
-                throw new Exception("query not found");
+                return null;
             }
             IQuery q = new Query(dr);
             IService s = ServiceFactory.Instance.GetService(q.ServiceType);
@@ -105,7 +111,12 @@ namespace Live5.Xps.Framework.Core
             q = XmlTool.XmlToObject(s.QueryType, doc) as IQuery;
             return q;
         }
-
+        public static IQuery GetDefaultQuery()
+        {
+            BuiltInQuery q = new BuiltInQuery();
+            q.Title = "Default query";
+            return q;
+        }
         public void ExportQuery(Guid queryId,string filePath)
         {
             string content = null;

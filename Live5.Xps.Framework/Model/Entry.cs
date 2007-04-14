@@ -97,7 +97,7 @@ namespace Live5.Xps.Framework.Model
         {
             get
             {
-                return new Uri(Constants.DefaultUri, "entry/" + EntryId.ToString("N"));
+                return new Uri(Constants.DefaultUri, "entry/" + EntryId.ToString());
             }
             set
             {

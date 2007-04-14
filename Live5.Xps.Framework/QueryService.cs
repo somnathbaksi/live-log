@@ -17,7 +17,10 @@ namespace Live5.Xps.Framework
         public IFeed GetFeed(Guid queryId)
         {
             IQuery query = QuerySqlProvider.GetQuery(queryId);
-
+            if (query==null)
+            {
+                query = QuerySqlProvider.GetDefaultQuery();
+            }
             m_Service = ServiceFactory.Instance.GetService(query.ServiceType);
             IFeed feed = m_Service.QueryExecutor.Execute(query);
             return feed;
