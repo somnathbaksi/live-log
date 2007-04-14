@@ -89,7 +89,6 @@
     <Compile Include="ExternalFrameworkTest.cs" />
     <Compile Include="ExternalQueryExecutorTest.cs" />
     <Compile Include="FeedTest.cs" />
-    <Compile Include="GoogleMembershipProviderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublishServiceTest.cs" />
     <Compile Include="QueryServiceTest.cs" />

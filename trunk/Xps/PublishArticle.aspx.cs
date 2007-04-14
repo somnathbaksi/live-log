@@ -15,21 +15,25 @@ public partial class PublishArticle : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Trace.Write(FCKeditor1.Value);
-    }
-
-    protected void FCKeditor1_DataBinding(object sender, EventArgs e)
-    {
-        bool success=PubArticle();
-        Trace.Write(FCKeditor1.Value);
+        if (IsPostBack)
+        {
+            bool success = PubArticle();
+            Trace.Write(FCKeditor1.Value);
+        }
+        
+        
     }
     bool PubArticle()
     {
         Article entry = new Article();
-        entry.Summary = "summary";
-        entry.Title = "title";
+        entry.Summary = TextBox1.Text;
+        entry.Title = TextBox2.Text;
         entry.Content = FCKeditor1.Value;
         PublishService p = new PublishService();
         return p.PutEntry(entry);
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+
     }
 }
