@@ -11,7 +11,7 @@
 #top{width:100%;height:24px;background:url(Images/top.jpg) left top no-repeat;}
 #header{color:Blue;border-bottom-color:Black;border-bottom-style:solid;}
 #nav{width:200px;height:600px;float:left;}
-#Content{width:70%;height:600px;float:left;}
+#content{width:70%;height:600px;float:left;background-color:#333333;}
 feed
 {
 	color:Silver;

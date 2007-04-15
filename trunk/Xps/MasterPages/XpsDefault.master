@@ -26,7 +26,7 @@
             <div>
             <img src="App_Themes/Default/Images/line.jpg" alt="line" />
             </div>
-            <div>
+            <div id="content">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
