@@ -1234,7 +1234,10 @@ namespace Live5.Xps.Framework
             }
         }
 
-
+        private bool ValidateLocalUser(string username, string password)
+        {
+            return true;
+        }
         private bool ValidateGmailUser(string username, string password)
         {
             bool isValid = false;
