@@ -13,8 +13,14 @@ public class Atom : IHttpHandler
     public void ProcessRequest(HttpContext context)
     {
         string qid = context.Request.QueryString["q"];
-
-        context.Response.ContentType = "text/xml";
+        string withStyle = context.Request.QueryString["style"];
+        bool style = true;
+        if (!string.IsNullOrEmpty(withStyle))
+        {
+            style = bool.Parse(withStyle);
+        }
+     
+      
         QueryService s = new QueryService();
         //IFeed feed =null;
         //if (qid!=null)
@@ -25,17 +31,27 @@ public class Atom : IHttpHandler
         //writer.WriteFeed(feed);
 
         System.Xml.XmlDocument xml = s.GetXmlFeed(qid);
-        // Create a procesing instruction.
-        System.Xml.XmlProcessingInstruction newPI;
-        String PItext = "type='text/xsl' href='App_Themes/Default/atom03.xsl'";
-        newPI = xml.CreateProcessingInstruction("xml-stylesheet", PItext);
-        xml.InsertAfter(newPI, xml.ChildNodes[0]);
-
-        //XslTransform myXslTransform;
-        //myXslTransform = new XslTransform();
-        //myXslTransform.Load("Xps/App_Themes/Default/atom03.xsl");
-        //myXslTransform.Transform(xml, null, context.Response.OutputStream); 
+        if (style)
+        {
+            context.Response.ContentType = "text/html";
+            XslCompiledTransform myXslTransform=new XslCompiledTransform();
+           
+            myXslTransform.Load(context.Request.PhysicalApplicationPath+"/App_Themes/Default/atom03.xsl");
+            myXslTransform.Transform(xml, null, context.Response.OutputStream); 
         
+        }
+        else
+        {
+            context.Response.ContentType = "text/xml";
+            // Create a procesing instruction.
+            System.Xml.XmlProcessingInstruction newPI;
+            String PItext = "type='text/xsl' href='App_Themes/Default/atom03.xsl'";
+            newPI = xml.CreateProcessingInstruction("xml-stylesheet", PItext);
+            xml.InsertAfter(newPI, xml.ChildNodes[0]);
+
+        }
+       
+      
         
         xml.Save(context.Response.OutputStream);
         context.Response.Flush();

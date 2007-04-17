@@ -15,7 +15,7 @@
         <title>
           <xsl:value-of select="atom:title"/>
         </title>
-        <link rel="stylesheet" href="/Xps/App_Themes/Default/atom.css" />
+        <link rel="stylesheet" href="/Xps/App_Themes/Default/atom.css" target="_blank"></link>
       </head>
       <body>
         <div id="feedcontent">
