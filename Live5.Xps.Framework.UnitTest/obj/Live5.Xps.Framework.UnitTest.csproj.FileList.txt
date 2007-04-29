@@ -1,6 +1,0 @@
-obj\Debug\ResolveAssemblyReference.cache
-..\Bin\Debug\Live5.Xps.Framework.UnitTest.dll.config
-..\Bin\Debug\Live5.Xps.Framework.UnitTest.dll
-..\Bin\Debug\Live5.Xps.Framework.UnitTest.pdb
-obj\Debug\Live5.Xps.Framework.UnitTest.dll
-obj\Debug\Live5.Xps.Framework.UnitTest.pdb
