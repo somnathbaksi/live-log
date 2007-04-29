@@ -15,7 +15,7 @@ namespace Live5.Xps.MediaComponent
         public Media(IDataRecord dr)
             : base(dr)
         {
-            int fieldIndex = dr.GetOrdinal("MediaContent");
+            int fieldIndex = dr.GetOrdinal("Content");
 
             if (!dr.IsDBNull(fieldIndex))
             {
@@ -42,7 +42,7 @@ namespace Live5.Xps.MediaComponent
         {
             get
             {
-                return new Uri(Constants.DefaultUri, "media/" + EntryId.ToString("N"));
+                return new Uri(Constants.DefaultUri, "mediaview.aspx?q=" + EntryId.ToString());
             }
             set
             {

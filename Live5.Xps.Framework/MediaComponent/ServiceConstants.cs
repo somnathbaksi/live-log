@@ -6,6 +6,7 @@ namespace Live5.Xps.MediaComponent
 {
    internal class ServiceConstants
     {
+       public const string Sp_MediaSearch = "sp_MediaSearch";
        public const string Sp_InsertMedia = "sp_InsertMedia";
     }
 }

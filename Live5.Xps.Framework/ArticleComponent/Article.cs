@@ -36,7 +36,7 @@ namespace Live5.Xps.ArticleComponent
         {
             get
             {
-                return new Uri(Constants.DefaultUri, "article/" + EntryId.ToString("N"));
+                return new Uri(Constants.DefaultUri, "articleview.aspx?q=" + EntryId.ToString());
             
             }
             set

@@ -44,11 +44,23 @@ namespace Live5.Xps.ArticleComponent
         {
             throw new Exception("The method or operation is not implemented.");
         }
-        public static IList<IEntry> SearchEntrys(string searchTerm)
+
+
+        public IList<IEntry> SearchEntries(IQuery query)
+        {
+            throw new Exception("The method or operation is not implemented.");
+        }
+
+        #endregion
+
+        #region IEntryDataProvider Members
+
+
+        public IList<IEntry> SearchEntries(string searchKey)
         {
             IList<IEntry> entrys = new List<IEntry>();
             IEntry entry = null;
-            IDataReader dr = SqlDbTool.ExecuteQuery(ServiceConstants.Sp_ArticleSearch, searchTerm);
+            IDataReader dr = SqlDbTool.ExecuteQuery(ServiceConstants.Sp_ArticleSearch, searchKey);
             while (dr.Read())
             {
                 entry = new Article(dr);
@@ -56,6 +68,7 @@ namespace Live5.Xps.ArticleComponent
             }
             return entrys;
         }
+
         #endregion
     }
 }

@@ -79,7 +79,7 @@ namespace Live5.Xps.Framework.Core
                     content = dr.GetString(fieldIndex);
                 }
                 doc.LoadXml(content);
-                q = XmlTool.XmlToObject(service.QueryType, doc) as IQuery;
+                q = XmlTool.XmlToObject(typeof(Query), doc) as IQuery;
                 queries.Add(q);
             }
             return queries;
@@ -108,12 +108,12 @@ namespace Live5.Xps.Framework.Core
                 content = dr.GetString(fieldIndex);
             }
             doc.LoadXml(content);
-            q = XmlTool.XmlToObject(s.QueryType, doc) as IQuery;
+            q = XmlTool.XmlToObject(typeof(Query), doc) as IQuery;
             return q;
         }
         public static IQuery GetDefaultQuery()
         {
-            BuiltInQuery q = new BuiltInQuery();
+            Query q = new Query();
             q.Title = "Default query";
             return q;
         }
@@ -144,7 +144,7 @@ namespace Live5.Xps.Framework.Core
             string serviceType = doc.SelectSingleNode("/ServiceType").InnerText;
             IService s = ServiceFactory.Instance.GetService(serviceType);
 
-            IQuery q = XmlTool.XmlToObject(s.QueryType, doc) as IQuery;
+            IQuery q = XmlTool.XmlToObject(typeof(Query), doc) as IQuery;
             this.SaveQuery(q);
         }
         public IList<IQuery> GetLabeledQuery(Guid labelId)
@@ -181,7 +181,7 @@ namespace Live5.Xps.Framework.Core
                     content = dr.GetString(fieldIndex);
                 }
                 doc.LoadXml(content);
-                q = XmlTool.XmlToObject(service.QueryType, doc) as IQuery;
+                q = XmlTool.XmlToObject(typeof(Query), doc) as IQuery;
                 queries.Add(q);
             }
             return queries;

@@ -97,7 +97,7 @@ namespace Live5.Xps.Framework.Model
         {
             get
             {
-                return new Uri(Constants.DefaultUri, "articleview.aspx?q=" + EntryId.ToString());
+                return new Uri(Constants.DefaultUri, "entryview.aspx?q=" + EntryId.ToString());
             }
             set
             {

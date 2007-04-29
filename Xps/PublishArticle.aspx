@@ -4,9 +4,12 @@
 
 <%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div style="width: 347px; height: 28px">
+    <div style="width: 475px; height: 28px">
         <asp:Label ID="Label1" runat="server" Text="Title:"></asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server" Width="275px"></asp:TextBox></div>
+        <asp:TextBox ID="TextBox1" runat="server" Width="275px"></asp:TextBox>&nbsp;
+        <asp:DropDownList ID="DropDownList1" runat="server">
+        </asp:DropDownList>&nbsp;
+    </div>
     <div style="width: 100px; height: 100px">
         <asp:Label ID="Label2" runat="server" Text="Summary:"></asp:Label>
         <asp:TextBox ID="TextBox2" runat="server" Height="136px" Width="392px"></asp:TextBox></div>

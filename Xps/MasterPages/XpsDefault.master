@@ -2,18 +2,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Untitled Page</title>
+    <title>Xps System</title>
+
     <script type="text/ecmascript" src="/Xps/Scripts/JScript.js"></script>
+
     <script type="text/ecmascript" src="ExpressInstallation/AC_OETags.js"></script>
+
     <script type="text/ecmascript" src="ExpressInstallation/FlashDetect.js"></script>
+
 </head>
 <body>
     <div id="page">
         <form id="form1" runat="server">
-            <div id="top">
-            </div>
-            <div>
-                <div id="header"style="font-size: 24pt;text-align:left;padding:0 0 0 80px">
+            <div id="header">
+                <div id="top">
+                </div>
+                <div style="font-size: 24pt; text-align: left; padding: 0 0 0 80px">
                     <img src="App_Themes/Default/Images/l2.jpg" alt="line" />
                 </div>
             </div>
@@ -24,7 +28,7 @@
                 <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Admin/QueryManage.aspx">QueryMange</asp:HyperLink>
             </div>
             <div>
-            <img src="App_Themes/Default/Images/line.jpg" alt="line" />
+                <img src="App_Themes/Default/Images/line.jpg" alt="line" />
             </div>
             <div id="content">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

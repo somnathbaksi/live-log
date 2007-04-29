@@ -33,43 +33,9 @@ public partial class QueryEditor : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        IQueryExecutor ex = null;
-        IQueryCreator c = null;
-        //switch (this.DropDownList1.SelectedValue)
-        //{
-        //    case "Live5.Xps.Framework.BuiltIn.BuiltInService":
-        //        ex = new BuiltInQueryExecutor();
-        //        c = new BuiltInQueryCreator();
-        //        break;
-        //    case "Live5.Xps.ArticleComponent.ArticleService":
-        //        ex = new ArticleQueryExecutor();
-        //        c = new ArticleQueryCreator();
-        //        break;
-        //    case "Live5.Xps.Framework.External.ExternalService":
-        //        ex = new ExternalQueryExecutor();
-        //        c = new ExternalQueryCreator();
-        //        break;
-
-        //    default:
-        //        break;
-        //}
-        ex = ServiceFactory.Instance.GetService(DropDownList1.SelectedValue).QueryExecutor;
-        c = ServiceFactory.Instance.GetService(DropDownList1.SelectedValue).QueryCreator;
-        IQuery q = null;
-        if (c is BuiltInQueryCreator)
-        {
-            BuiltInQueryCreator b = c as BuiltInQueryCreator;
-            q=b.Create(this.TextBox1.Text);
-        }
-        if (c is ArticleQueryCreator)
-        {
-            ArticleQueryCreator a = c as ArticleQueryCreator;
-            q=a.Create(this.TextBox1.Text);
-        } if (c is ExternalQueryCreator)
-        {
-            ExternalQueryCreator externalQ = c as ExternalQueryCreator;
-            q = externalQ.Create(this.TextBox1.Text);
-        }
+        QueryCreator c = new QueryCreator();
+        IQuery q = c.Create(TextBox1.Text.Trim(), DropDownList1.SelectedValue);
+        QueryExecutor ex = new QueryExecutor();
        
       // QuerySqlProvider p = new QuerySqlProvider();
       // IQuery q2= p.GetQuery<BuiltInQuery>(new Guid("c8ab16ad-1d06-4265-8ddd-469b303a82d0"));
@@ -84,37 +50,14 @@ public partial class QueryEditor : System.Web.UI.Page
     protected void Button2_Click(object sender, EventArgs e)
     {
 
-        IQueryExecutor ex = null;
-        IQueryCreator c = null;
-        switch (this.DropDownList1.SelectedValue)
-        {
-            case "Live5.Xps.Framework.BuiltIn.BuiltInService":
-                ex = new BuiltInQueryExecutor();
-                c = new BuiltInQueryCreator();
-                break;
-            case "Live5.Xps.ArticleComponent.ArticleService":
-                ex = new ArticleQueryExecutor();
-                c = new ArticleQueryCreator();
-                break;
-            case "Live5.Xps.Framework.External.ExternalService":
-                ex = new ExternalQueryExecutor();
-                c = new ExternalQueryCreator();
-                break;
+        QueryCreator c = new QueryCreator();
+        IQuery q = c.Create(TextBox1.Text.Trim(), DropDownList1.SelectedValue);
+        QueryExecutor ex = new QueryExecutor();
 
-            default:
-                break;
-        }
-        IQuery q = null;
-        if (c is BuiltInQueryCreator)
-        {
-            BuiltInQueryCreator b = c as BuiltInQueryCreator;
-            q = b.Create(this.TextBox1.Text);
-        }
-        if (c is ArticleQueryCreator)
-        {
-            ArticleQueryCreator a = c as ArticleQueryCreator;
-            q = a.Create(this.TextBox1.Text);
-        }
+        // QuerySqlProvider p = new QuerySqlProvider();
+        // IQuery q2= p.GetQuery<BuiltInQuery>(new Guid("c8ab16ad-1d06-4265-8ddd-469b303a82d0"));
+        //p.SaveQuery(q);
+  
         QuerySqlProvider p = new QuerySqlProvider();
         p.SaveQuery(q);
 

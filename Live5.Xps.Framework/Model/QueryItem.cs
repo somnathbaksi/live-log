@@ -29,5 +29,18 @@ namespace Live5.Xps.Framework.Core
             set { m_Value = value; }
         }
 
+       private bool m_IsEmpty;
+       public bool IsEmpty
+       {
+           get
+           {
+               return m_IsEmpty;
+           }
+           set
+           {
+               m_IsEmpty = value;
+           }
+       }
+
     }
 }

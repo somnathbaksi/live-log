@@ -21,8 +21,9 @@ namespace Live5.Xps.Framework
             {
                 query = QuerySqlProvider.GetDefaultQuery();
             }
-            m_Service = ServiceFactory.Instance.GetService(query.ServiceType);
-            IFeed feed = m_Service.QueryExecutor.Execute(query);
+            
+            QueryExecutor queryExecutor=new QueryExecutor();
+            IFeed feed = queryExecutor.Execute(query);
             return feed;
         }
         public IFeed GetFeed(string queryId)

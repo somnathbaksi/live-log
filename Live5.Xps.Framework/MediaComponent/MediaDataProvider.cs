@@ -57,5 +57,28 @@ namespace Live5.Xps.MediaComponent
            return entrys;
        }
         #endregion
-    }
+
+       #region IEntryDataProvider Members
+
+
+       public IList<IEntry> SearchEntries(IQuery query)
+       {
+           throw new Exception("The method or operation is not implemented.");
+       }
+
+       public IList<IEntry> SearchEntries(string searchKey)
+       {
+           IList<IEntry> entrys = new List<IEntry>();
+           IEntry entry = null;
+           IDataReader dr = SqlDbTool.ExecuteQuery(ServiceConstants.Sp_MediaSearch, searchKey);
+           while (dr.Read())
+           {
+               entry = new Media(dr);
+               entrys.Add(entry);
+           }
+           return entrys;
+       }
+
+       #endregion
+   }
 }

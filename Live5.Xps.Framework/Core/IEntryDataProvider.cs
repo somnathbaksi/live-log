@@ -10,5 +10,7 @@ namespace Live5.Xps.Framework.Core
        bool InsertEntry(IEntry entry);
        bool DeleteEntry(string entryId);
        bool UpdateEntry(IEntry entry);
+       IList<IEntry> SearchEntries(IQuery query);
+       IList<IEntry> SearchEntries(string searchKey);
     }
 }

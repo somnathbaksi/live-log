@@ -2,12 +2,22 @@
     CodeFile="Default.aspx.cs" Inherits="Mock_Ups_Default" Title="Untitled Page" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="nav">
-        <asp:LinkButton ID="LinkButton2" runat="server">My Account</asp:LinkButton><br />
-        <asp:LinkButton ID="LinkButton1" runat="server">Publish Information</asp:LinkButton><br />
-        <asp:LinkButton ID="LinkButton3" runat="server">Shor Message For You</asp:LinkButton><br />
-        <asp:LinkButton ID="LinkButton4" runat="server">Your Published Items</asp:LinkButton><br />
-        <asp:LinkButton ID="LinkButton5" runat="server">Saved Search</asp:LinkButton><br />
+    <div id="left">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <ajaxToolkit:CollapsiblePanelExtender ID="CollapsiblePanelExtender1" runat="server"
+            CollapseControlID="InfoPanelTitle" ExpandControlID="InfoPanelTitle" TargetControlID="Panel1">
+        </ajaxToolkit:CollapsiblePanelExtender>
+        <asp:Panel ID="InfoPanelTitle" runat="server" CssClass="collapsePanelHeader">
+            <asp:Label ID="Label1" runat="server" Text="Label">Info Pane</asp:Label>
+        </asp:Panel>
+        <asp:Panel ID="Panel1" runat="server" CssClass="collapsePanel">
+            <asp:LinkButton ID="LinkButton2" runat="server">My Account</asp:LinkButton><br />
+            <asp:LinkButton ID="LinkButton1" runat="server">Publish Information</asp:LinkButton><br />
+            <asp:LinkButton ID="LinkButton3" runat="server">Shor Message For You</asp:LinkButton><br />
+            <asp:LinkButton ID="LinkButton4" runat="server">Your Published Items</asp:LinkButton><br />
+            <asp:LinkButton ID="LinkButton5" runat="server">Saved Search</asp:LinkButton><br />
+        </asp:Panel>
         <div>
             <asp:DropDownList ID="DropDownList1" runat="server">
             </asp:DropDownList>
@@ -16,13 +26,14 @@
             <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound">
                 <ItemTemplate>
                     <div>
+                       
                         <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
         </div>
     </div>
-    <div id="Content" style="float: left; height: 800px">
+    <div id="center">
         <div>
             <asp:TextBox ID="TextBox1" runat="server" Width="388px"></asp:TextBox>
             <asp:DropDownList ID="DropDownList2" runat="server">
@@ -34,8 +45,18 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Search" />
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Search&Save" />
         </div>
-        <div style="float: left; width: 80%; height: auto;">
-            <iframe id="feed" src="Atom.ashx?q=<%=QueryId %>&style=true" width="600px" height="800px">ddd</iframe>
+        <div>
+            <ajaxToolkit:UpdatePanelAnimationExtender ID="UpdatePanelAnimationExtender1" runat="server" TargetControlID="FeedsPanel">
+            </ajaxToolkit:UpdatePanelAnimationExtender>
+            <asp:UpdatePanel ID="FeedsPanel" runat="server">
+                <ContentTemplate>
+                <div id="feedPanel" class="feedsPanel">
+                    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                </div></ContentTemplate>
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="Button1" EventName="Click"></asp:AsyncPostBackTrigger>
+                </Triggers>
+            </asp:UpdatePanel>
         </div>
     </div>
 </asp:Content>

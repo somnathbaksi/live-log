@@ -14,7 +14,7 @@ public class Atom : IHttpHandler
     {
         string qid = context.Request.QueryString["q"];
         string withStyle = context.Request.QueryString["style"];
-        bool style = true;
+        bool style = false;
         if (!string.IsNullOrEmpty(withStyle))
         {
             style = bool.Parse(withStyle);
@@ -48,12 +48,10 @@ public class Atom : IHttpHandler
             String PItext = "type='text/xsl' href='App_Themes/Default/atom03.xsl'";
             newPI = xml.CreateProcessingInstruction("xml-stylesheet", PItext);
             xml.InsertAfter(newPI, xml.ChildNodes[0]);
+            xml.Save(context.Response.OutputStream);
 
         }
-       
-      
         
-        xml.Save(context.Response.OutputStream);
         context.Response.Flush();
     }
 

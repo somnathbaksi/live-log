@@ -19,5 +19,6 @@ namespace Live5.Xps.Framework.Core
        internal const string Sp_ApplyLabel="sp_ApplyLabel";
        internal const string Sp_GetQueryByLabel = "sp_GetQueryByLabel";
        internal const string Sp_SaveTempQuery = "sp_SaveTempQuery";
+       internal const string Sp_GetCategories = "sp_GetCategories";
     }
 }

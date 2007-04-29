@@ -10,12 +10,22 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using Live5.Xps.Framework;
 using Live5.Xps.ArticleComponent;
+using System.Collections.Generic;
+using Live5.Xps.Framework.Model;
+using Live5.Xps.Framework.Dal;
 
 public partial class PublishArticle : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (IsPostBack)
+        if (!IsPostBack)
+        {
+            DropDownList1.DataSource = GetCategories();
+            DropDownList1.DataTextField="CategoryName";
+            DropDownList1.DataValueField="CategoryId";
+            DropDownList1.DataBind();
+        }
+        else
         {
             bool success = PubArticle();
             Trace.Write(FCKeditor1.Value);
@@ -35,5 +45,9 @@ public partial class PublishArticle : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
 
+    }
+    private IList<Category> GetCategories()
+    {
+       return CategoryDao.GetCategories();
     }
 }
