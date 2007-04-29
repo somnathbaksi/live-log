@@ -78,9 +78,6 @@
   <ItemGroup>
     <Compile Include="ArticleComponent\Article.cs" />
     <Compile Include="ArticleComponent\ArticleDataProvider.cs" />
-    <Compile Include="ArticleComponent\ArticleQuery.cs" />
-    <Compile Include="ArticleComponent\ArticleQueryCreator.cs" />
-    <Compile Include="ArticleComponent\ArticleQueryExecutor.cs" />
     <Compile Include="ArticleComponent\ArticleService.cs" />
     <Compile Include="ArticleComponent\ServiceConfig.cs" />
     <Compile Include="ArticleComponent\ServiceConstants.cs" />
@@ -94,12 +91,18 @@
     <Compile Include="Atom\ScopedElement.cs" />
     <Compile Include="Atom\Utils.cs" />
     <Compile Include="Auth\XpsMembershipProvider.cs" />
+    <Compile Include="BuiltIn\BuiltInDataProvider.cs" />
+    <Compile Include="Core\EntryFactory.cs" />
+    <Compile Include="Core\QueryCreator.cs" />
+    <Compile Include="Core\QueryExecutor.cs" />
+    <Compile Include="Dal\CategoryDao.cs" />
+    <Compile Include="Dal\EntryDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Dal\LabelDao.cs" />
+    <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Label.cs" />
     <Compile Include="Model\Person.cs" />
-    <Compile Include="BuiltIn\BuiltInQuery.cs" />
-    <Compile Include="BuiltIn\BuiltInQueryCreator.cs" />
-    <Compile Include="BuiltIn\BuiltInQueryExecutor.cs" />
     <Compile Include="BuiltIn\BuiltInService.cs" />
     <Compile Include="Core\Constants.cs" />
     <Compile Include="Model\Feed.cs" />
@@ -108,7 +111,6 @@
     <Compile Include="Model\IFeed.cs" />
     <Compile Include="Core\IQueryCreator.cs" />
     <Compile Include="Core\QuerySqlProvider.cs" />
-    <Compile Include="Dal\EntryDao.cs" />
     <Compile Include="Exceptions\BusinessLayerException.cs" />
     <Compile Include="Exceptions\RecoverableUpdateException.cs" />
     <Compile Include="External\ExternalQuery.cs" />
@@ -146,9 +148,6 @@
     <Compile Include="MediaComponent\ServiceConstants.cs" />
     <Compile Include="MediaComponent\Media.cs" />
     <Compile Include="MediaComponent\MediaDataProvider.cs" />
-    <Compile Include="MediaComponent\MediaQuery.cs" />
-    <Compile Include="MediaComponent\MediaQueryCreator.cs" />
-    <Compile Include="MediaComponent\MediaQueryExecutor.cs" />
     <Compile Include="MediaComponent\MediaService.cs" />
     <Compile Include="MediaComponent\ServiceConfig.cs" />
   </ItemGroup>

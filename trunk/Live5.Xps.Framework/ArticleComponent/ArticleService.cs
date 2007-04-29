@@ -11,28 +11,14 @@ namespace Live5.Xps.ArticleComponent
         #region IService Members
 
 
-        public Type QueryType
-        {
-            get { return typeof(ArticleQuery); }
-        }
 
-
-        public IQueryCreator QueryCreator
-        {
-            get {
-                return new ArticleQueryCreator();
-            }
-        }
 
         public IEntryDataProvider DataProvider
         {
             get { return new ArticleDataProvider(); }
         }
 
-        public IQueryExecutor QueryExecutor
-        {
-            get { return new ArticleQueryExecutor(); }
-        }
+ 
 
         #endregion
     }

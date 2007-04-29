@@ -19,7 +19,7 @@
       </head>
       <body>
         <div id="feedcontent">
-          <div id="wrap2">
+          <div>
             <div id="feedtitle">
               <h1>
                 <a>
@@ -74,7 +74,7 @@
                 </xsl:for-each>
               </div>
             </div>
-            <em class="clear">&amp;nbsp;</em>
+            <em class="clear"></em>
           </div>
         </div>
       </body>

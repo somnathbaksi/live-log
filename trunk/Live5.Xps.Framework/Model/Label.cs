@@ -5,6 +5,7 @@ using System.Data;
 
 namespace Live5.Xps.Framework.Model
 {
+   
     public class Label
     {
         private Guid m_LabelId;
