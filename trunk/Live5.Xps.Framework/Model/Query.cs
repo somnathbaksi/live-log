@@ -10,7 +10,8 @@ namespace Live5.Xps.Framework.Core
         Literal,
         SingleEntry,
         Label,
-        Category
+        Category,
+        Predefined
     }
     [Serializable]
     [XmlRoot("Query")]
@@ -30,6 +31,7 @@ namespace Live5.Xps.Framework.Core
         public Query()
         {
         }
+
         public Query(string serviceType)
         {
             m_ServiceType = serviceType;
@@ -46,6 +48,13 @@ namespace Live5.Xps.Framework.Core
             {
                 m_ServiceType = dr.GetString(fieldIndex);
             }
+        }
+        private string m_PredefinedName;
+
+        public string PredefinedName
+        {
+            get { return m_PredefinedName; }
+            set { m_PredefinedName = value; }
         }
 
         #region IQuery Members
@@ -66,6 +75,20 @@ namespace Live5.Xps.Framework.Core
                 m_ServiceType = value;
             }
             
+        }
+        private int m_PageSize;
+
+        public int PageSize
+        {
+            get { return m_PageSize; }
+            set { m_PageSize = value; }
+        }
+        private int m_PageIndex;
+
+        public int PageIndex
+        {
+            get { return m_PageIndex; }
+            set { m_PageIndex = value; }
         }
 
         public Guid Id

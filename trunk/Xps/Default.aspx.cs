@@ -17,6 +17,8 @@ using Live5.Xps.Framework;
 using System.Xml.Xsl;
 using System.Xml;
 using System.IO;
+using Live5.Xps.Framework.Model;
+using System.Net;
 
 public partial class Mock_Ups_Default : System.Web.UI.Page
 {
@@ -64,16 +66,11 @@ public partial class Mock_Ups_Default : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        QueryCreator c = new QueryCreator();
-        IQuery q = c.Create(TextBox1.Text.Trim(), DropDownList2.SelectedValue);
-
-        QuerySqlProvider p = new QuerySqlProvider();
-        p.SaveTempQuery(q);
-        queryId = q.Id;
-
+      
         //Get feed.
-        QueryService s = new QueryService();
-        System.Xml.XmlDocument xml = s.GetXmlFeed(queryId.ToString());
+       IFeed feed =QueryService.Search(TextBox1.Text.Trim(), DropDownList2.SelectedValue);
+
+       System.Xml.XmlDocument xml = QueryService.FeedToXml(feed);
 
         MemoryStream ms = new MemoryStream();
         XslCompiledTransform myXslTransform = new XslCompiledTransform();
@@ -87,12 +84,64 @@ public partial class Mock_Ups_Default : System.Web.UI.Page
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        QueryCreator c = new QueryCreator();
-        IQuery q = c.Create(TextBox1.Text.Trim(), DropDownList2.SelectedValue);
+        //Get feed.
+        IFeed feed = QueryService.SearchAndSave(TextBox1.Text.Trim(), DropDownList2.SelectedValue);
 
-        QuerySqlProvider p = new QuerySqlProvider();
-        p.SaveQuery(q);
-        queryId = q.Id;
+        System.Xml.XmlDocument xml = QueryService.FeedToXml(feed);
+
+        MemoryStream ms = new MemoryStream();
+        XslCompiledTransform myXslTransform = new XslCompiledTransform();
+
+        myXslTransform.Load(Request.PhysicalApplicationPath + "/App_Themes/Default/atom_inline.xsl");
+        myXslTransform.Transform(xml, null, ms);
+        ms.Position = 0;
+        TextReader rd = new StreamReader(ms);
+        Literal1.Text = rd.ReadToEnd();
+        FlashVars += "http://localhost:8080/Xps/atom.ashx?q=" + queryId.ToString();
+    
     }
 
+    protected void LinkButton6_Click(object sender, EventArgs e)
+    {
+        //Get feed.
+        IFeed feed = QueryService.GetMostRecent(DropDownList2.SelectedValue,1,10);
+
+        System.Xml.XmlDocument xml = QueryService.FeedToXml(feed);
+
+        MemoryStream ms = new MemoryStream();
+        XslCompiledTransform myXslTransform = new XslCompiledTransform();
+
+        myXslTransform.Load(Request.PhysicalApplicationPath + "/App_Themes/Default/atom_inline.xsl");
+        myXslTransform.Transform(xml, null, ms);
+        ms.Position = 0;
+        TextReader rd = new StreamReader(ms);
+        Literal1.Text = rd.ReadToEnd();
+        FlashVars += "http://localhost:8080/Xps/atom.ashx?q=" + queryId.ToString();
+    }
+    protected void LinkButton7_Click(object sender, EventArgs e)
+    {
+        LoadExternalRss("http://youtube.com/rss/global/top_viewed.rss");
+    }
+    protected void LinkButton8_Click(object sender, EventArgs e)
+    {
+        LoadExternalRss("http://tv.mofile.com/cn/rss/rssrecommend.do");
+    }
+
+    private void LoadExternalRss(string url)
+    {
+        WebRequest req = HttpWebRequest.Create(url);
+        WebResponse res = req.GetResponse();
+        XslCompiledTransform myXslTransform = new XslCompiledTransform();
+
+        MemoryStream ms = new MemoryStream();
+        XmlWriter w = XmlWriter.Create(ms);
+        XmlDocument xmlDoc = new XmlDocument();
+        xmlDoc.Load(res.GetResponseStream());
+        myXslTransform.Load(Request.PhysicalApplicationPath + "/App_Themes/Default/rss.xsl");
+        //myXslTransform.OutputSettings.ConformanceLevel = ConformanceLevel.Auto;
+        myXslTransform.Transform(xmlDoc, null, ms);
+        ms.Position = 0;
+        TextReader rd = new StreamReader(ms);
+        Literal1.Text = rd.ReadToEnd();
+    }
 }

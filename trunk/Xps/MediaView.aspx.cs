@@ -16,10 +16,8 @@ public partial class MediaView:System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         string qid = Request.QueryString["q"];
-        QueryCreator c = new QueryCreator();
-        IQuery q = c.Create(new Guid(qid), "Live5.Xps.MediaComponent.MediaService");
-        QuerySqlProvider qp = new QuerySqlProvider();
-        qp.SaveTempQuery(q);
+      IQuery q =  QueryService.CreateSingleEntryQuery(new Guid(qid), "Live5.Xps.MediaComponent.MediaService");
+       
         FlashVars = FlashVars+"http://localhost:8080/Xps/atom.ashx?q=" + q.Id.ToString()+"&style=false";
     }
 }

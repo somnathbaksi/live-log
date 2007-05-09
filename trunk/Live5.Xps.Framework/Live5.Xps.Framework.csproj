@@ -100,6 +100,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Dal\LabelDao.cs" />
+    <Compile Include="Dal\PredefinedSearch.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Label.cs" />
     <Compile Include="Model\Person.cs" />
@@ -153,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Auth\Upload.ashx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Atom\mediatypes.txt" />

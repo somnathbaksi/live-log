@@ -5,7 +5,10 @@
 	background-color:black;
 	color:White;
 }
-
+#searchBar
+{
+	background-color:Black;
+}
 .divborder{border:solid 1px #b7d8ed; }
 .tableborder{border:solid 1px #b7d8ed;}
 #page

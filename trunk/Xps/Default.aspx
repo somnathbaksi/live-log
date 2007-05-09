@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPages/XpsDefault.master" AutoEventWireup="true"
-    CodeFile="Default.aspx.cs" Inherits="Mock_Ups_Default" Title="Untitled Page" %>
+    CodeFile="Default.aspx.cs" Inherits="Mock_Ups_Default" Title="Untitled Page" UICulture="auto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="left">
@@ -9,7 +9,7 @@
             CollapseControlID="InfoPanelTitle" ExpandControlID="InfoPanelTitle" TargetControlID="Panel1">
         </ajaxToolkit:CollapsiblePanelExtender>
         <asp:Panel ID="InfoPanelTitle" runat="server" CssClass="collapsePanelHeader">
-            <asp:Label ID="Label1" runat="server" Text="Label">Info Pane</asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="<%$Resources:Lbl_InfoPane.Text %>"></asp:Label>
         </asp:Panel>
         <asp:Panel ID="Panel1" runat="server" CssClass="collapsePanel">
             <asp:LinkButton ID="LinkButton2" runat="server">My Account</asp:LinkButton><br />
@@ -18,6 +18,14 @@
             <asp:LinkButton ID="LinkButton4" runat="server">Your Published Items</asp:LinkButton><br />
             <asp:LinkButton ID="LinkButton5" runat="server">Saved Search</asp:LinkButton><br />
         </asp:Panel>
+        <asp:Panel ID="Panel2" runat="server" Height="50px" Width="125px">
+            <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Most Recent</asp:LinkButton><br />
+            <br />
+            </asp:Panel>
+        <asp:Panel ID="Panel3" runat="server" Height="50px" Width="125px">
+            <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Width="102px">YouTube</asp:LinkButton></asp:Panel>
+        <asp:Panel ID="Panel4" runat="server" Height="50px" Width="125px">
+            <asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">Mofile</asp:LinkButton></asp:Panel>
         <div>
             <asp:DropDownList ID="DropDownList1" runat="server">
             </asp:DropDownList>
@@ -50,12 +58,12 @@
             </ajaxToolkit:UpdatePanelAnimationExtender>
             <asp:UpdatePanel ID="FeedsPanel" runat="server">
                 <ContentTemplate>
-                <div id="feedPanel" class="feedsPanel">
-                    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
-                </div></ContentTemplate>
+<DIV id="feedPanel" class="feedsPanel"><asp:Literal id="Literal1" runat="server" __designer:wfdid="w3"></asp:Literal> </DIV>
+</ContentTemplate>
                 <Triggers>
-                    <asp:AsyncPostBackTrigger ControlID="Button1" EventName="Click"></asp:AsyncPostBackTrigger>
-                </Triggers>
+<asp:AsyncPostBackTrigger ControlID="Button1" EventName="Click"></asp:AsyncPostBackTrigger>
+<asp:AsyncPostBackTrigger ControlID="LinkButton6" EventName="Click"></asp:AsyncPostBackTrigger>
+</Triggers>
             </asp:UpdatePanel>
         </div>
     </div>

@@ -40,9 +40,15 @@ namespace Live5.Xps.Framework.Atom
 	/// <seealso cref="AtomElement"/>
 	/// </summary>
 	[Serializable]
-	public abstract class ScopedElement 
+	public class ScopedElement
 	{
-		private string _content = String.Empty;
+        private string m_Content = String.Empty;
+
+        public string Content
+        {
+            get { return m_Content; }
+            set { m_Content = value; }
+        }
 
 		/// <summary>
 		/// Initialize a new instance of the <see cref="ScopedElement"/> class.
@@ -54,12 +60,15 @@ namespace Live5.Xps.Framework.Atom
 		/// <summary>
 		/// The content of the element.
 		/// </summary>
-		public virtual string Content
-		{
-			get { return _content; }
-			set { _content = value; }
-		}
 
+
+        private string m_TagName;
+
+        public string TagName
+        {
+            get { return m_TagName; }
+            set { m_TagName = value; }
+        }
 		#endregion
 
 	}
