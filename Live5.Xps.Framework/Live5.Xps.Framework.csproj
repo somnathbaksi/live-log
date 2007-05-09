@@ -154,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Auth\Upload.ashx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Atom\mediatypes.txt" />
