@@ -16,19 +16,22 @@
         <form id="form1" runat="server">
             <div id="header">
                 <div id="top">
+                    <%=Resources.Default.Header %>
                 </div>
                 <div style="font-size: 24pt; text-align: left; padding: 0 0 0 80px">
                     <img src="App_Themes/Default/Images/l2.jpg" alt="line" />
                 </div>
             </div>
-            <div>
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home |</asp:HyperLink>
-                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Publish.aspx">Publish |</asp:HyperLink>
-                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/QueryEditor.aspx">QueryEdit |</asp:HyperLink>
-                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Admin/QueryManage.aspx">QueryMange</asp:HyperLink>
-            </div>
-            <div>
-                <img src="App_Themes/Default/Images/line.jpg" alt="line" />
+            <div id="searchBar">
+                <div>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home |</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Publish.aspx">Publish |</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/QueryEditor.aspx">QueryEdit |</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Admin/QueryManage.aspx">QueryMange</asp:HyperLink>
+                </div>
+                <div>
+                    <img src="App_Themes/Default/Images/line.jpg" alt="line" />
+                </div>
             </div>
             <div id="content">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

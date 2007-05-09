@@ -25,6 +25,8 @@ namespace Live5.Xps.Framework.Core
                    break;
                case QueryType.Category:
                    break;
+               case QueryType.Predefined:
+                   break;
                default:
                    break;
            }
@@ -66,6 +68,35 @@ namespace Live5.Xps.Framework.Core
            
            //feed.EntryList = es as Collection<IEntry>;
            return feed;
+       }
+
+       private IFeed SearchPredefined(Query q)
+       {
+           IFeed feed = null;
+           switch (q.PredefinedName)
+           {
+               case "mostrecent":
+                   feed= GetMostRecent(q);
+                   break;
+               case "mostviewed":
+                   feed= GetMostViewed(q);
+                   break;
+               default:
+                   feed= GetMostRecent(q);
+                   break;
+           }
+           return feed;
+       }
+
+       private IFeed GetMostViewed(Query q)
+       {
+           
+           throw new Exception("The method or operation is not implemented.");
+       }
+
+       private IFeed GetMostRecent(Query q)
+       {
+           throw new Exception("The method or operation is not implemented.");
        }
     }
 }
