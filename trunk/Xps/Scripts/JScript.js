@@ -5,6 +5,21 @@ GetWebRequest(url,"feedPanel");
 }
 var displayElement;
 
+function PlayYouTubeVideo(url){
+//alert(url);
+var inlinePlayer = document.getElementById("inlinePlayer");
+
+inlinePlayer.innerHTML='<object width="480" height="395"><param name="allowScriptAccess" value="sameDomain"/>'+
+                          '<param name="movie" value="'+url+'"></param>'+
+                              '<param name="FlashVars" value="autoplay=0"/>'+
+                                '<param name="wmode" value="transparent"/>'+
+                          '<embed FlashVars="autoplay=0" width="480" height="395" allowScriptAccess="sameDomain" wmode="transparent" type="application/x-shockwave-flash" '+
+                            'src="'+url+'">'+
+                         ' </embed>'+
+                       ' </object>';
+                        inlinePlayer.style="width:480px;height395px;"
+             //alert(inlinePlayer.innerHTML);           
+}
 
 //function pageLoad()
 //{

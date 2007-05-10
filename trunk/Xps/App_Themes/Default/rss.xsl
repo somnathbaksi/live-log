@@ -61,8 +61,15 @@
                             <xsl:value-of select="link"/>
                           </xsl:attribute>link to original
                         </a>
+                        <span>
+                          <xsl:attribute name="onclick">
+                            <xsl:text>PlayYouTubeVideo('</xsl:text><xsl:value-of select="enclosure/@url"/>
+                            <xsl:text>')</xsl:text>
+                          </xsl:attribute>Play</span>
+                        
                       </div>
                       <div>
+                        <!--
                         <object width="480" height="395">
                           <param name="allowScriptAccess" value="sameDomain"/>
                           <param name="movie">
@@ -78,6 +85,7 @@
                             </xsl:attribute>
                           </embed>
                         </object>
+                        -->
                       </div>
                     </div>
                   </xsl:for-each>
