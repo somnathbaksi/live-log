@@ -1,5 +1,6 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPages/XpsDefault.master" AutoEventWireup="true"
-    CodeFile="Default.aspx.cs" Inherits="Mock_Ups_Default" Title="Untitled Page" UICulture="auto" %>
+    CodeFile="Default.aspx.cs" Inherits="Mock_Ups_Default" Title="Untitled Page"
+    UICulture="auto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="left">
@@ -21,7 +22,7 @@
         <asp:Panel ID="Panel2" runat="server" Height="50px" Width="125px">
             <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Most Recent</asp:LinkButton><br />
             <br />
-            </asp:Panel>
+        </asp:Panel>
         <asp:Panel ID="Panel3" runat="server" Height="50px" Width="125px">
             <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Width="102px">YouTube</asp:LinkButton></asp:Panel>
         <asp:Panel ID="Panel4" runat="server" Height="50px" Width="125px">
@@ -34,7 +35,6 @@
             <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound">
                 <ItemTemplate>
                     <div>
-                       
                         <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                     </div>
                 </ItemTemplate>
@@ -54,16 +54,23 @@
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Search&Save" />
         </div>
         <div>
-            <ajaxToolkit:UpdatePanelAnimationExtender ID="UpdatePanelAnimationExtender1" runat="server" TargetControlID="FeedsPanel">
+            <ajaxToolkit:UpdatePanelAnimationExtender ID="UpdatePanelAnimationExtender1" runat="server"
+                TargetControlID="FeedsPanel">
             </ajaxToolkit:UpdatePanelAnimationExtender>
+            <div id="inlinePlayer" style="width: 480px; height: 395px; border: solid 1px red;">
+            </div>
             <asp:UpdatePanel ID="FeedsPanel" runat="server">
                 <ContentTemplate>
-<DIV id="feedPanel" class="feedsPanel"><asp:Literal id="Literal1" runat="server" __designer:wfdid="w3"></asp:Literal> </DIV>
-</ContentTemplate>
+                    <div id="feedPanel" class="feedsPanel">
+                        <asp:Literal ID="Literal1" runat="server" __designer:wfdid="w3"></asp:Literal>
+                    </div>
+                </ContentTemplate>
                 <Triggers>
-<asp:AsyncPostBackTrigger ControlID="Button1" EventName="Click"></asp:AsyncPostBackTrigger>
-<asp:AsyncPostBackTrigger ControlID="LinkButton6" EventName="Click"></asp:AsyncPostBackTrigger>
-</Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="Button1" EventName="Click"></asp:AsyncPostBackTrigger>
+                    <asp:AsyncPostBackTrigger ControlID="LinkButton6" EventName="Click"></asp:AsyncPostBackTrigger>
+                    <asp:AsyncPostBackTrigger ControlID="LinkButton7" EventName="Click"></asp:AsyncPostBackTrigger>
+                    <asp:AsyncPostBackTrigger ControlID="LinkButton8" EventName="Click"></asp:AsyncPostBackTrigger>
+                </Triggers>
             </asp:UpdatePanel>
         </div>
     </div>
