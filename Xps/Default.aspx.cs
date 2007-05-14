@@ -49,7 +49,9 @@ public partial class Mock_Ups_Default : System.Web.UI.Page
             QuerySqlProvider p = new QuerySqlProvider();
             Repeater1.DataSource = p.GetLabeledQuery(labelId);
             Repeater1.DataBind();
+
         }
+    
     }
     protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
     {

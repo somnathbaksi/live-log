@@ -63,7 +63,7 @@
                         </a>
                         <span>
                           <xsl:attribute name="onclick">
-                            <xsl:text>PlayYouTubeVideo('</xsl:text><xsl:value-of select="enclosure/@url"/>
+                            <xsl:text>PlayYouTubeVideo(this,'</xsl:text><xsl:value-of select="enclosure/@url"/>
                             <xsl:text>')</xsl:text>
                           </xsl:attribute>Play</span>
                         
