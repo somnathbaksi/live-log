@@ -10,7 +10,7 @@ var requiredRevision = 0;
 // -----------------------------------------------------------------------------
 
 function WriteFlash(flashfile,f_width,f_height,f_vars){
-
+alert("WriteFlash");
 // Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
 var hasProductInstall = DetectFlashVer(6, 0, 65);
 

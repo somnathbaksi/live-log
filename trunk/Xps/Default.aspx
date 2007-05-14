@@ -10,7 +10,9 @@
             CollapseControlID="InfoPanelTitle" ExpandControlID="InfoPanelTitle" TargetControlID="Panel1">
         </ajaxToolkit:CollapsiblePanelExtender>
         <asp:Panel ID="InfoPanelTitle" runat="server" CssClass="collapsePanelHeader">
-            <asp:Label ID="Label1" runat="server" Text="<%$Resources:Lbl_InfoPane.Text %>"></asp:Label>
+            <asp:Label ID="Label1" runat="server" meta:resourceKey="Lbl_InfoPane" ></asp:Label>
+            <div><%=Resources.Default.Footer %>
+            </div>
         </asp:Panel>
         <asp:Panel ID="Panel1" runat="server" CssClass="collapsePanel">
             <asp:LinkButton ID="LinkButton2" runat="server">My Account</asp:LinkButton><br />
@@ -19,12 +21,18 @@
             <asp:LinkButton ID="LinkButton4" runat="server">Your Published Items</asp:LinkButton><br />
             <asp:LinkButton ID="LinkButton5" runat="server">Saved Search</asp:LinkButton><br />
         </asp:Panel>
+        <ajaxToolkit:CollapsiblePanelExtender ID="CollapsiblePanelExtender2" runat="server"
+            CollapseControlID="Panel5" ExpandControlID="Panel5" TargetControlID="Panel3">
+        </ajaxToolkit:CollapsiblePanelExtender>
         <asp:Panel ID="Panel2" runat="server" Height="50px" Width="125px">
             <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Most Recent</asp:LinkButton><br />
             <br />
         </asp:Panel>
-        <asp:Panel ID="Panel3" runat="server" Height="50px" Width="125px">
-            <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Width="102px">YouTube</asp:LinkButton></asp:Panel>
+        <asp:Panel ID="Panel5" runat="server" CssClass="collapsePanelHeader">
+            <asp:Label ID="Label2" runat="server" Text="YouTube Site"></asp:Label>
+        </asp:Panel>
+        <asp:Panel ID="Panel3" runat="server"  CssClass="collapsePanel">
+            <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Width="102px">Top Viewed</asp:LinkButton></asp:Panel>
         <asp:Panel ID="Panel4" runat="server" Height="50px" Width="125px">
             <asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">Mofile</asp:LinkButton></asp:Panel>
         <div>
@@ -57,20 +65,18 @@
             <ajaxToolkit:UpdatePanelAnimationExtender ID="UpdatePanelAnimationExtender1" runat="server"
                 TargetControlID="FeedsPanel">
             </ajaxToolkit:UpdatePanelAnimationExtender>
-            <div id="inlinePlayer" style="width: 480px; height: 395px; border: solid 1px red;">
-            </div>
             <asp:UpdatePanel ID="FeedsPanel" runat="server">
-                <ContentTemplate>
+                <contenttemplate>
                     <div id="feedPanel" class="feedsPanel">
                         <asp:Literal ID="Literal1" runat="server" __designer:wfdid="w3"></asp:Literal>
                     </div>
-                </ContentTemplate>
-                <Triggers>
+                </contenttemplate>
+                <triggers>
                     <asp:AsyncPostBackTrigger ControlID="Button1" EventName="Click"></asp:AsyncPostBackTrigger>
                     <asp:AsyncPostBackTrigger ControlID="LinkButton6" EventName="Click"></asp:AsyncPostBackTrigger>
                     <asp:AsyncPostBackTrigger ControlID="LinkButton7" EventName="Click"></asp:AsyncPostBackTrigger>
                     <asp:AsyncPostBackTrigger ControlID="LinkButton8" EventName="Click"></asp:AsyncPostBackTrigger>
-                </Triggers>
+                </triggers>
             </asp:UpdatePanel>
         </div>
     </div>

@@ -4,12 +4,20 @@ var url="atom.ashx?q="+feedUrl;
 GetWebRequest(url,"feedPanel");
 }
 var displayElement;
-
-function PlayYouTubeVideo(url){
+var videoPlayer;
+function PlayYouTubeVideo(sender,url){
 //alert(url);
-var inlinePlayer = document.getElementById("inlinePlayer");
+var rssEntry=sender.parentNode.parentNode;
+var playerHolder=document.createElement("div");
+var playerCloseBtn=document.createElement("div");
+var player=document.createElement("div");
+videoPlayer=playerHolder;
+playerCloseBtn.innerHTML='<span onClick="Close()">Close</span>';
+playerHolder.appendChild(playerCloseBtn);
+playerHolder.appendChild(player);
+rssEntry.appendChild(playerHolder);
 
-inlinePlayer.innerHTML='<object width="480" height="395"><param name="allowScriptAccess" value="sameDomain"/>'+
+player.innerHTML='<object width="480" height="395"><param name="allowScriptAccess" value="sameDomain"/>'+
                           '<param name="movie" value="'+url+'"></param>'+
                               '<param name="FlashVars" value="autoplay=0"/>'+
                                 '<param name="wmode" value="transparent"/>'+
@@ -17,10 +25,12 @@ inlinePlayer.innerHTML='<object width="480" height="395"><param name="allowScrip
                             'src="'+url+'">'+
                          ' </embed>'+
                        ' </object>';
-                        inlinePlayer.style="width:480px;height395px;"
-             //alert(inlinePlayer.innerHTML);           
 }
-
+function Close(){
+if(videoPlayer!=null){
+videoPlayer.outerHTML="";
+}
+}
 //function pageLoad()
 //{
 //GetWebRequest('getTarget.htm', 'ResultId0');
