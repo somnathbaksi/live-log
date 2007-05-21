@@ -14,6 +14,8 @@ using System.Text;
 using System.Web.Configuration;
 using System.Net;
 using System.IO;
+using Live5.Xps.Framework.Utils;
+using Live5.Xps.Framework.Core;
 
 /*
 
@@ -427,89 +429,97 @@ namespace Live5.Xps.Framework
 
             if (u == null)
             {
-                DateTime createDate = DateTime.Now;
+                //DateTime createDate = DateTime.Now;
 
-                if (providerUserKey == null)
+                //if (providerUserKey == null)
+                //{
+                //    providerUserKey = Guid.NewGuid();
+                //}
+                //else
+                //{
+                //    if (!(providerUserKey is Guid))
+                //    {
+                //        status = MembershipCreateStatus.InvalidProviderUserKey;
+                //        return null;
+                //    }
+                //}
+
+                //OdbcConnection conn = new OdbcConnection(connectionString);
+                //OdbcCommand cmd = new OdbcCommand("INSERT INTO [" + tableName + "]" +
+                //      " (PKID, Username, Password, Email, PasswordQuestion, " +
+                //      " PasswordAnswer, IsApproved," +
+                //      " Comment, CreationDate, LastPasswordChangedDate, LastActivityDate," +
+                //      " ApplicationName, IsLockedOut, LastLockedOutDate," +
+                //      " FailedPasswordAttemptCount, FailedPasswordAttemptWindowStart, " +
+                //      " FailedPasswordAnswerAttemptCount, FailedPasswordAnswerAttemptWindowStart)" +
+                //      " Values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", conn);
+
+                //cmd.Parameters.Add("@PKID", OdbcType.UniqueIdentifier).Value = providerUserKey;
+                //cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
+                //cmd.Parameters.Add("@Password", OdbcType.VarChar, 255).Value = EncodePassword(password);
+                //cmd.Parameters.Add("@Email", OdbcType.VarChar, 128).Value = email;
+                //cmd.Parameters.Add("@PasswordQuestion", OdbcType.VarChar, 255).Value = passwordQuestion;
+                //cmd.Parameters.Add("@PasswordAnswer", OdbcType.VarChar, 255).Value = EncodePassword(passwordAnswer);
+                //cmd.Parameters.Add("@IsApproved", OdbcType.Bit).Value = isApproved;
+                //cmd.Parameters.Add("@Comment", OdbcType.VarChar, 255).Value = "";
+                //cmd.Parameters.Add("@CreationDate", OdbcType.DateTime).Value = createDate;
+                //cmd.Parameters.Add("@LastPasswordChangedDate", OdbcType.DateTime).Value = createDate;
+                //cmd.Parameters.Add("@LastActivityDate", OdbcType.DateTime).Value = createDate;
+                //cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = pApplicationName;
+                //cmd.Parameters.Add("@IsLockedOut", OdbcType.Bit).Value = false;
+                //cmd.Parameters.Add("@LastLockedOutDate", OdbcType.DateTime).Value = createDate;
+                //cmd.Parameters.Add("@FailedPasswordAttemptCount", OdbcType.Int).Value = 0;
+                //cmd.Parameters.Add("@FailedPasswordAttemptWindowStart", OdbcType.DateTime).Value = createDate;
+                //cmd.Parameters.Add("@FailedPasswordAnswerAttemptCount", OdbcType.Int).Value = 0;
+                //cmd.Parameters.Add("@FailedPasswordAnswerAttemptWindowStart", OdbcType.DateTime).Value = createDate;
+
+                //try
+                //{
+                //    conn.Open();
+
+                //    int recAdded = cmd.ExecuteNonQuery();
+
+                //    if (recAdded > 0)
+                //    {
+                //        status = MembershipCreateStatus.Success;
+                //    }
+                //    else
+                //    {
+                //        status = MembershipCreateStatus.UserRejected;
+                //    }
+                //}
+                //catch (OdbcException e)
+                //{
+                //    if (WriteExceptionsToEventLog)
+                //    {
+                //        WriteToEventLog(e, "CreateUser");
+                //    }
+
+                //    status = MembershipCreateStatus.ProviderError;
+                //}
+                //finally
+                //{
+                //    conn.Close();
+                //}
+
+                int result = SqlDbTool.ExecuteNonQuery(Constants.Sp_CreateUser, username, password, email,
+                     passwordQuestion, passwordAnswer, isApproved, string.Empty);
+                if (result > 0)
                 {
-                    providerUserKey = Guid.NewGuid();
+                    status = MembershipCreateStatus.Success;
                 }
                 else
                 {
-                    if (!(providerUserKey is Guid))
-                    {
-                        status = MembershipCreateStatus.InvalidProviderUserKey;
-                        return null;
-                    }
+                    status = MembershipCreateStatus.UserRejected;
                 }
 
-                OdbcConnection conn = new OdbcConnection(connectionString);
-                OdbcCommand cmd = new OdbcCommand("INSERT INTO [" + tableName + "]" +
-                      " (PKID, Username, Password, Email, PasswordQuestion, " +
-                      " PasswordAnswer, IsApproved," +
-                      " Comment, CreationDate, LastPasswordChangedDate, LastActivityDate," +
-                      " ApplicationName, IsLockedOut, LastLockedOutDate," +
-                      " FailedPasswordAttemptCount, FailedPasswordAttemptWindowStart, " +
-                      " FailedPasswordAnswerAttemptCount, FailedPasswordAnswerAttemptWindowStart)" +
-                      " Values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", conn);
-
-                cmd.Parameters.Add("@PKID", OdbcType.UniqueIdentifier).Value = providerUserKey;
-                cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
-                cmd.Parameters.Add("@Password", OdbcType.VarChar, 255).Value = EncodePassword(password);
-                cmd.Parameters.Add("@Email", OdbcType.VarChar, 128).Value = email;
-                cmd.Parameters.Add("@PasswordQuestion", OdbcType.VarChar, 255).Value = passwordQuestion;
-                cmd.Parameters.Add("@PasswordAnswer", OdbcType.VarChar, 255).Value = EncodePassword(passwordAnswer);
-                cmd.Parameters.Add("@IsApproved", OdbcType.Bit).Value = isApproved;
-                cmd.Parameters.Add("@Comment", OdbcType.VarChar, 255).Value = "";
-                cmd.Parameters.Add("@CreationDate", OdbcType.DateTime).Value = createDate;
-                cmd.Parameters.Add("@LastPasswordChangedDate", OdbcType.DateTime).Value = createDate;
-                cmd.Parameters.Add("@LastActivityDate", OdbcType.DateTime).Value = createDate;
-                cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = pApplicationName;
-                cmd.Parameters.Add("@IsLockedOut", OdbcType.Bit).Value = false;
-                cmd.Parameters.Add("@LastLockedOutDate", OdbcType.DateTime).Value = createDate;
-                cmd.Parameters.Add("@FailedPasswordAttemptCount", OdbcType.Int).Value = 0;
-                cmd.Parameters.Add("@FailedPasswordAttemptWindowStart", OdbcType.DateTime).Value = createDate;
-                cmd.Parameters.Add("@FailedPasswordAnswerAttemptCount", OdbcType.Int).Value = 0;
-                cmd.Parameters.Add("@FailedPasswordAnswerAttemptWindowStart", OdbcType.DateTime).Value = createDate;
-
-                try
-                {
-                    conn.Open();
-
-                    int recAdded = cmd.ExecuteNonQuery();
-
-                    if (recAdded > 0)
-                    {
-                        status = MembershipCreateStatus.Success;
-                    }
-                    else
-                    {
-                        status = MembershipCreateStatus.UserRejected;
-                    }
-                }
-                catch (OdbcException e)
-                {
-                    if (WriteExceptionsToEventLog)
-                    {
-                        WriteToEventLog(e, "CreateUser");
-                    }
-
-                    status = MembershipCreateStatus.ProviderError;
-                }
-                finally
-                {
-                    conn.Close();
-                }
-
-
-                return GetUser(username, false);
+                u = GetUser(username, false);
             }
             else
             {
                 status = MembershipCreateStatus.DuplicateUserName;
             }
-
-
-            return null;
+            return u;
         }
 
 
@@ -778,62 +788,25 @@ namespace Live5.Xps.Framework
 
         public override MembershipUser GetUser(string username, bool userIsOnline)
         {
-            OdbcConnection conn = new OdbcConnection(connectionString);
-            OdbcCommand cmd = new OdbcCommand("SELECT PKID, Username, Email, PasswordQuestion," +
-                 " Comment, IsApproved, IsLockedOut, CreationDate, LastLoginDate," +
-                 " LastActivityDate, LastPasswordChangedDate, LastLockedOutDate" +
-                 " FROM [" + tableName + "] WHERE Username = ? AND ApplicationName = ?", conn);
-
-            cmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
-            cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = pApplicationName;
+            IDataReader dr = SqlDbTool.ExecuteQuery(Constants.Sp_GetUserByUserName, username);
 
             MembershipUser u = null;
-            OdbcDataReader reader = null;
-
-            try
+            if (dr.Read())
             {
-                conn.Open();
-
-                reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    reader.Read();
-                    u = GetUserFromReader(reader);
-
-                    if (userIsOnline)
-                    {
-                        OdbcCommand updateCmd = new OdbcCommand("UPDATE [" + tableName + "] " +
-                                  "SET LastActivityDate = ? " +
-                                  "WHERE Username = ? AND Applicationname = ?", conn);
-
-                        updateCmd.Parameters.Add("@LastActivityDate", OdbcType.DateTime).Value = DateTime.Now;
-                        updateCmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
-                        updateCmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = pApplicationName;
-
-                        updateCmd.ExecuteNonQuery();
-                    }
-                }
-
+                u = GetUserFromReader(dr);
             }
-            catch (OdbcException e)
-            {
-                if (WriteExceptionsToEventLog)
-                {
-                    WriteToEventLog(e, "GetUser(String, Boolean)");
 
-                    throw new ProviderException(exceptionMessage);
-                }
-                else
-                {
-                    throw e;
-                }
-            }
-            finally
+            if (userIsOnline)
             {
-                if (reader != null) { reader.Close(); }
+                //OdbcCommand updateCmd = new OdbcCommand("UPDATE [" + tableName + "] " +
+                //          "SET LastActivityDate = ? " +
+                //          "WHERE Username = ? AND Applicationname = ?", conn);
 
-                conn.Close();
+                //updateCmd.Parameters.Add("@LastActivityDate", OdbcType.DateTime).Value = DateTime.Now;
+                //updateCmd.Parameters.Add("@Username", OdbcType.VarChar, 255).Value = username;
+                //updateCmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = pApplicationName;
+
+                //updateCmd.ExecuteNonQuery();
             }
 
             return u;
@@ -913,48 +886,129 @@ namespace Live5.Xps.Framework
         // MembershipUser.GetUser implementation.
         //
 
-        private MembershipUser GetUserFromReader(OdbcDataReader reader)
+        private MembershipUser GetUserFromReader(IDataReader dr)
         {
-            object providerUserKey = reader.GetValue(0);
-            string username = reader.GetString(1);
-            string email = reader.GetString(2);
+            Guid userId = Guid.Empty;
+            string userName = null;
+            string email = null;
+            string passwordQuestion = null;
+            string comment = null;
+            bool isApproved = false;
+            bool isLockedOut = false;
 
-            string passwordQuestion = "";
-            if (reader.GetValue(3) != DBNull.Value)
-                passwordQuestion = reader.GetString(3);
-
-            string comment = "";
-            if (reader.GetValue(4) != DBNull.Value)
-                comment = reader.GetString(4);
-
-            bool isApproved = reader.GetBoolean(5);
-            bool isLockedOut = reader.GetBoolean(6);
-            DateTime creationDate = reader.GetDateTime(7);
-
+            DateTime createDate = new DateTime();
             DateTime lastLoginDate = new DateTime();
-            if (reader.GetValue(8) != DBNull.Value)
-                lastLoginDate = reader.GetDateTime(8);
 
-            DateTime lastActivityDate = reader.GetDateTime(9);
-            DateTime lastPasswordChangedDate = reader.GetDateTime(10);
+            DateTime lastActivityDate = new DateTime();
+            DateTime lastPasswordChangedDate = new DateTime();
+            DateTime lastLockOutDate = new DateTime();
+            for (int i = 0; i < dr.FieldCount; i++)
+            {
+                if (dr.GetName(i).Equals("UserId", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        userId = dr.GetGuid(i);
+                    }
+                    continue;
+                }
+                if (dr.GetName(i).Equals("UserName", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        userName = dr.GetString(i);
+                    }
+                    continue;
+                }
+                if (dr.GetName(i).Equals("Email", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        email = dr.GetString(i);
+                    }
+                    continue;
+                }
+                if (dr.GetName(i).Equals("PasswordQuestion", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        passwordQuestion = dr.GetString(i);
+                    }
+                    continue;
+                }
+                if (dr.GetName(i).Equals("Comment", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        comment = dr.GetString(i);
+                    }
+                }
+                if (dr.GetName(i).Equals("IsApproved", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        isApproved = dr.GetBoolean(i);
 
-            DateTime lastLockedOutDate = new DateTime();
-            if (reader.GetValue(11) != DBNull.Value)
-                lastLockedOutDate = reader.GetDateTime(11);
+                    }
+                }
+                if (dr.GetName(i).Equals("isLockedOut", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        isLockedOut = dr.GetBoolean(i);
+                    }
+                }
+                if (dr.GetName(i).Equals("createDate", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        createDate = dr.GetDateTime(i);
+                    }
+                }
+                if (dr.GetName(i).Equals("lastLoginDate", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        lastLoginDate = dr.GetDateTime(i);
+                    }
+                }
+                if (dr.GetName(i).Equals("lastActivityDate", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        lastActivityDate = dr.GetDateTime(i);
+                    }
+                }
+                if (dr.GetName(i).Equals("lastPasswordChangedDate", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        lastPasswordChangedDate = dr.GetDateTime(i);
+                    }
+                }
+                if (dr.GetName(i).Equals("lastLockOutDate", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    if (!dr.IsDBNull(i))
+                    {
+                        lastLockOutDate = dr.GetDateTime(i);
+                    }
+                }
+
+            }
 
             MembershipUser u = new MembershipUser(this.Name,
-                                                  username,
-                                                  providerUserKey,
+                                                  userName,
+                                                  userId,
                                                   email,
                                                   passwordQuestion,
                                                   comment,
                                                   isApproved,
                                                   isLockedOut,
-                                                  creationDate,
+                                                  createDate,
                                                   lastLoginDate,
                                                   lastActivityDate,
                                                   lastPasswordChangedDate,
-                                                  lastLockedOutDate);
+                                                  lastLockOutDate);
 
             return u;
         }
@@ -1014,43 +1068,21 @@ namespace Live5.Xps.Framework
 
         public override string GetUserNameByEmail(string email)
         {
-            OdbcConnection conn = new OdbcConnection(connectionString);
-            OdbcCommand cmd = new OdbcCommand("SELECT Username" +
-                  " FROM [" + tableName + "] WHERE Email = ? AND ApplicationName = ?", conn);
-
-            cmd.Parameters.Add("@Email", OdbcType.VarChar, 128).Value = email;
-            cmd.Parameters.Add("@ApplicationName", OdbcType.VarChar, 255).Value = pApplicationName;
-
-            string username = "";
-
-            try
+            string userName = null;
+            IDataReader dr = SqlDbTool.ExecuteQuery(Constants.Sp_GetUserNameByEmail, email);
+            if (dr.Read())
             {
-                conn.Open();
-
-                username = (string)cmd.ExecuteScalar();
-            }
-            catch (OdbcException e)
-            {
-                if (WriteExceptionsToEventLog)
+                if (!dr.IsDBNull(0))
                 {
-                    WriteToEventLog(e, "GetUserNameByEmail");
-
-                    throw new ProviderException(exceptionMessage);
-                }
-                else
-                {
-                    throw e;
+                    userName = dr.GetString(0);
                 }
             }
-            finally
+            if (userName == null)
             {
-                conn.Close();
+                userName = string.Empty;
             }
 
-            if (username == null)
-                username = "";
-
-            return username;
+            return userName;
         }
 
 
@@ -1223,7 +1255,7 @@ namespace Live5.Xps.Framework
             {
                 throw new ArgumentException("password cannot be null or empty.", "password");
             }
-          
+
             if (username.EndsWith("@gmail.com", StringComparison.InvariantCultureIgnoreCase))
             {
                 return ValidateGmailUser(username, password);

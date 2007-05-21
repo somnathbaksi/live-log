@@ -22,8 +22,9 @@ namespace Live5.Xps.Framework.Utils
         {
             //Database db = DatabaseFactory.CreateDatabase();
             DbCommand cmd = db.GetStoredProcCommand(spName, spParams);
+            
             return db.ExecuteNonQuery(cmd);
+            
         }
-       
     }
 }
