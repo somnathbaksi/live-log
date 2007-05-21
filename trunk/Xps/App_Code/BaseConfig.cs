@@ -20,6 +20,14 @@ public class BaseConfig
         // TODO: Add constructor logic here
         //
     }
+    public static string AppFullPath
+    {
+        get
+        {
+            int appPathIndex = HttpContext.Current.Request.Url.AbsoluteUri.IndexOf(AppVirtualPath);
+            return HttpContext.Current.Request.Url.AbsoluteUri.Substring(0,appPathIndex);
+        }
+    }
     public static string AppVirtualPath
     {
         get

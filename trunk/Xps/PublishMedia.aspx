@@ -55,5 +55,13 @@
             <div style="width: 478px; height: 100px">
                 <asp:TextBox ID="TextBox4" runat="server" Height="110px" Width="464px"></asp:TextBox></div>
         </div>
+        <div>
+                    <script type="text/ecmascript">
+<!--
+WriteFlash("swf/PublishControl","600","500","feed=http://localhost:8080/Xps/atom.ashx?q=254c84d2-80ef-48f7-9f50-2ca0acfad155");
+// -->
+            </script>
+
+        </div>
     </div>
 </asp:Content>

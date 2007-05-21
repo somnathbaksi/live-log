@@ -27,8 +27,10 @@
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home |</asp:HyperLink>
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Publish.aspx">Publish |</asp:HyperLink>
                     <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/QueryEditor.aspx">QueryEdit |</asp:HyperLink>
-                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Admin/QueryManage.aspx">QueryMange</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Admin/QueryManage.aspx">QueryMange</asp:HyperLink><a
+                        href="LogOn.aspx">Log On</a><a href="SignUp.aspx">SignUp</a>
                 </div>
+                
                 <div>
                     <img src="App_Themes/Default/Images/line.jpg" alt="line" />
                 </div>
