@@ -1,7 +1,7 @@
 # Microsoft Developer Studio Project File - Database Project
 Begin DataProject = "Live5.Xps.DB"
    MSDTVersion = "80"
-   DefDBRef = ".\sqlexpress.Xps.dbo"
+   DefDBRef = "Xps.mdf"
    Begin Folder = "Change Scripts"
    End
    Begin Folder = "Create Scripts"
