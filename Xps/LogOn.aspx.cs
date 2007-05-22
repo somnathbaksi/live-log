@@ -15,4 +15,17 @@ public partial class LogOn : System.Web.UI.Page
     {
 
     }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+       if( Membership.ValidateUser(TextBox1.Text, TextBox2.Text)){
+          // MembershipUser user = Membership.GetUser();
+           FormsAuthentication.RedirectFromLoginPage(TextBox1.Text,
+                                          false);
+       }
+       else
+       {
+           Label1.Text = "invalid";
+       }
+        
+    }
 }

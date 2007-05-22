@@ -17,6 +17,7 @@
             <div id="header">
                 <div id="top">
                     <%=Resources.Default.Header %>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                 </div>
                 <div style="font-size: 24pt; text-align: left; padding: 0 0 0 80px">
                     <img src="App_Themes/Default/Images/l2.jpg" alt="line" />
