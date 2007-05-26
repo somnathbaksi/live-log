@@ -28,7 +28,15 @@ namespace Live5.Xps.ArticleComponent
 
         public bool InsertEntry(IEntry entry)
         {
-            Guid id = Guid.NewGuid();
+            Guid id = Guid.Empty;
+            foreach (Person p in entry.Authors)
+            {
+                id = p.Id;
+            }
+            if (id==Guid.Empty)
+            {
+                id = Guid.NewGuid();
+            }
             int result = SqlDbTool.ExecuteNonQuery(ServiceConstants.Sp_InsertArticle, entry.EntryId, entry.Title, entry.Summary, entry.ServiceType, id, entry.Content,entry.ContentMediaType.ToString());
 
             return result >= 0 ? true : false;
