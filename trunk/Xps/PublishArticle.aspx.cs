@@ -21,8 +21,8 @@ public partial class PublishArticle : System.Web.UI.Page
         if (!IsPostBack)
         {
             DropDownList1.DataSource = GetCategories();
-            DropDownList1.DataTextField="CategoryName";
-            DropDownList1.DataValueField="CategoryId";
+            DropDownList1.DataTextField = "CategoryName";
+            DropDownList1.DataValueField = "CategoryId";
             DropDownList1.DataBind();
         }
         else
@@ -30,17 +30,25 @@ public partial class PublishArticle : System.Web.UI.Page
             bool success = PubArticle();
             Trace.Write(FCKeditor1.Value);
         }
-        
-        
+
+
     }
     bool PubArticle()
     {
         Article entry = new Article();
+        Person p = new Person();
+        MembershipUser u = Membership.GetUser();
+     
+        p.Id = (Guid)u.ProviderUserKey;
+        p.Name = u.UserName;
+        p.Email = u.Email;
+
+        entry.Authors.Add(p);
         entry.Summary = TextBox1.Text;
         entry.Title = TextBox2.Text;
         entry.Content = FCKeditor1.Value;
-        PublishService p = new PublishService();
-        return p.PutEntry(entry);
+        PublishService ps = new PublishService();
+        return ps.PutEntry(entry);
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -48,6 +56,6 @@ public partial class PublishArticle : System.Web.UI.Page
     }
     private IList<Category> GetCategories()
     {
-       return CategoryDao.GetCategories();
+        return CategoryDao.GetCategories();
     }
 }

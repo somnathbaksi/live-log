@@ -19,8 +19,9 @@ public partial class LogOn : System.Web.UI.Page
     {
        if( Membership.ValidateUser(TextBox1.Text, TextBox2.Text)){
           // MembershipUser user = Membership.GetUser();
+           
            FormsAuthentication.RedirectFromLoginPage(TextBox1.Text,
-                                          false);
+                                       false);
        }
        else
        {

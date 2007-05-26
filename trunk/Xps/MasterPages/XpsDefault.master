@@ -7,7 +7,7 @@
     <script type="text/ecmascript" src="/Xps/Scripts/JScript.js"></script>
 
     <script type="text/ecmascript" src="ExpressInstallation/AC_OETags.js"></script>
-
+    <script type="text/ecmascript" src="ExpressInstallation/swfformfix.js"></script>
     <script type="text/ecmascript" src="ExpressInstallation/FlashDetect.js"></script>
 
 </head>

@@ -27,9 +27,9 @@ player.innerHTML='<object width="480" height="395"><param name="allowScriptAcces
                        ' </object>';
 }
 function Close(){
-if(videoPlayer!=null){
-videoPlayer.outerHTML="";
-}
+    if(videoPlayer!=null){
+    videoPlayer.outerHTML="";
+    }
 }
 //function pageLoad()
 //{
@@ -37,6 +37,12 @@ videoPlayer.outerHTML="";
 //PostWebRequest('postTarget.aspx', 'ResultId0')
 //}
 
+function getFeedUrl(){
+alert("helll");
+    var feedUrl=document.getElementById("feedUrl").value;
+    
+    return feedUrl;
+}
 
 function GetWebRequest(getPage, HTMLtarget)
 {

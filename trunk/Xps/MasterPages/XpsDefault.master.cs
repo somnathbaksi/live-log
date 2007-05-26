@@ -16,7 +16,7 @@ public partial class Mock_Ups_XpsDefault : System.Web.UI.MasterPage
       MembershipUser u =  Membership.GetUser();
       if (u!=null)
       {
-          Label1.Text = u.ProviderUserKey.ToString();
+          Label1.Text = Page.User.Identity.Name;
       }
     }
 }
